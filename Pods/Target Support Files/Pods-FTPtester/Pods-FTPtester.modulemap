@@ -1,0 +1,6 @@
+framework module Pods_FTPtester {
+  umbrella header "Pods-FTPtester-umbrella.h"
+
+  export *
+  module * { export * }
+}

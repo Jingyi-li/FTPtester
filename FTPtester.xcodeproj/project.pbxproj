@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE361F3A961E472B4D29C84A /* Pods_FTPtester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DA7C403D8B4651401AF905 /* Pods_FTPtester.framework */; };
+		F1A891E9212CD61000633EFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A891E8212CD61000633EFC /* AppDelegate.swift */; };
+		F1A891EB212CD61000633EFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A891EA212CD61000633EFC /* ViewController.swift */; };
+		F1A891EE212CD61000633EFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A891EC212CD61000633EFC /* Main.storyboard */; };
+		F1A891F0212CD61000633EFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1A891EF212CD61000633EFC /* Assets.xcassets */; };
+		F1A891F3212CD61000633EFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A891F1212CD61000633EFC /* LaunchScreen.storyboard */; };
+		F1F3C581212CDCB30062771F /* FilesProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F3C582212CDCB30062771F /* FilesProvider.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		83542425427EF856F162566D /* Pods-FTPtester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTPtester.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FTPtester/Pods-FTPtester.debug.xcconfig"; sourceTree = "<group>"; };
+		A570AED74517868E5B9AB160 /* Pods-FTPtester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTPtester.release.xcconfig"; path = "Pods/Target Support Files/Pods-FTPtester/Pods-FTPtester.release.xcconfig"; sourceTree = "<group>"; };
+		A9DA7C403D8B4651401AF905 /* Pods_FTPtester.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FTPtester.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1A891E5212CD61000633EFC /* FTPtester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTPtester.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1A891E8212CD61000633EFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F1A891EA212CD61000633EFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F1A891ED212CD61000633EFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F1A891EF212CD61000633EFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1A891F2212CD61000633EFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F1A891F4212CD61000633EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1F3C582212CDCB30062771F /* FilesProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FilesProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1A891E2212CD61000633EFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1F3C581212CDCB30062771F /* FilesProvider.framework in Frameworks */,
+				BE361F3A961E472B4D29C84A /* Pods_FTPtester.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01223E1EC42FA52909B3DCD8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83542425427EF856F162566D /* Pods-FTPtester.debug.xcconfig */,
+				A570AED74517868E5B9AB160 /* Pods-FTPtester.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1503A202D3D534FB3385DA90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1F3C582212CDCB30062771F /* FilesProvider.framework */,
+				A9DA7C403D8B4651401AF905 /* Pods_FTPtester.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1A891DC212CD61000633EFC = {
+			isa = PBXGroup;
+			children = (
+				F1A891E7212CD61000633EFC /* FTPtester */,
+				F1A891E6212CD61000633EFC /* Products */,
+				01223E1EC42FA52909B3DCD8 /* Pods */,
+				1503A202D3D534FB3385DA90 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F1A891E6212CD61000633EFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1A891E5212CD61000633EFC /* FTPtester.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1A891E7212CD61000633EFC /* FTPtester */ = {
+			isa = PBXGroup;
+			children = (
+				F1A891E8212CD61000633EFC /* AppDelegate.swift */,
+				F1A891EA212CD61000633EFC /* ViewController.swift */,
+				F1A891EC212CD61000633EFC /* Main.storyboard */,
+				F1A891EF212CD61000633EFC /* Assets.xcassets */,
+				F1A891F1212CD61000633EFC /* LaunchScreen.storyboard */,
+				F1A891F4212CD61000633EFC /* Info.plist */,
+			);
+			path = FTPtester;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1A891E4212CD61000633EFC /* FTPtester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1A891F7212CD61000633EFC /* Build configuration list for PBXNativeTarget "FTPtester" */;
+			buildPhases = (
+				3CD1E47B3EE3B1D803DB133B /* [CP] Check Pods Manifest.lock */,
+				F1A891E1212CD61000633EFC /* Sources */,
+				F1A891E2212CD61000633EFC /* Frameworks */,
+				F1A891E3212CD61000633EFC /* Resources */,
+				FD6C5AB25168A5103D09015D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTPtester;
+			productName = FTPtester;
+			productReference = F1A891E5212CD61000633EFC /* FTPtester.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F1A891DD212CD61000633EFC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Jingyi LI";
+				TargetAttributes = {
+					F1A891E4212CD61000633EFC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F1A891E0212CD61000633EFC /* Build configuration list for PBXProject "FTPtester" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F1A891DC212CD61000633EFC;
+			productRefGroup = F1A891E6212CD61000633EFC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1A891E4212CD61000633EFC /* FTPtester */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1A891E3212CD61000633EFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1A891F3212CD61000633EFC /* LaunchScreen.storyboard in Resources */,
+				F1A891F0212CD61000633EFC /* Assets.xcassets in Resources */,
+				F1A891EE212CD61000633EFC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CD1E47B3EE3B1D803DB133B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FTPtester-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD6C5AB25168A5103D09015D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FTPtester/Pods-FTPtester-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FilesProvider/FilesProvider.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FilesProvider.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FTPtester/Pods-FTPtester-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1A891E1212CD61000633EFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1A891EB212CD61000633EFC /* ViewController.swift in Sources */,
+				F1A891E9212CD61000633EFC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F1A891EC212CD61000633EFC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1A891ED212CD61000633EFC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F1A891F1212CD61000633EFC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1A891F2212CD61000633EFC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F1A891F5212CD61000633EFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F1A891F6212CD61000633EFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1A891F8212CD61000633EFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83542425427EF856F162566D /* Pods-FTPtester.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P95972UZ6;
+				INFOPLIST_FILE = FTPtester/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dorsaVi.Carol.FTPtester;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F1A891F9212CD61000633EFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A570AED74517868E5B9AB160 /* Pods-FTPtester.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P95972UZ6;
+				INFOPLIST_FILE = FTPtester/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dorsaVi.Carol.FTPtester;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F1A891E0212CD61000633EFC /* Build configuration list for PBXProject "FTPtester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1A891F5212CD61000633EFC /* Debug */,
+				F1A891F6212CD61000633EFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1A891F7212CD61000633EFC /* Build configuration list for PBXNativeTarget "FTPtester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1A891F8212CD61000633EFC /* Debug */,
+				F1A891F9212CD61000633EFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F1A891DD212CD61000633EFC /* Project object */;
+}
