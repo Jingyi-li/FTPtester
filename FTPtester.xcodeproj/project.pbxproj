@@ -20,6 +20,7 @@
 		83542425427EF856F162566D /* Pods-FTPtester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTPtester.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FTPtester/Pods-FTPtester.debug.xcconfig"; sourceTree = "<group>"; };
 		A570AED74517868E5B9AB160 /* Pods-FTPtester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTPtester.release.xcconfig"; path = "Pods/Target Support Files/Pods-FTPtester/Pods-FTPtester.release.xcconfig"; sourceTree = "<group>"; };
 		A9DA7C403D8B4651401AF905 /* Pods_FTPtester.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FTPtester.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16023FC212FB513009C6EB4 /* FTPtester.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FTPtester.entitlements; sourceTree = "<group>"; };
 		F1A891E5212CD61000633EFC /* FTPtester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTPtester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A891E8212CD61000633EFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1A891EA212CD61000633EFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 		F1A891E7212CD61000633EFC /* FTPtester */ = {
 			isa = PBXGroup;
 			children = (
+				F16023FC212FB513009C6EB4 /* FTPtester.entitlements */,
 				F1A891E8212CD61000633EFC /* AppDelegate.swift */,
 				F1A891EA212CD61000633EFC /* ViewController.swift */,
 				F1A891EC212CD61000633EFC /* Main.storyboard */,
@@ -127,6 +129,11 @@
 					F1A891E4212CD61000633EFC = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
