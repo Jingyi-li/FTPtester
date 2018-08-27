@@ -149,7 +149,7 @@
                                         </constraints>
                                         <state key="normal" title="Save"/>
                                         <connections>
-                                            <action selector="fileSaveOrDelet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J70-nb-Bhu"/>
+                                            <action selector="fileSaveToLocal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kJb-B7-Pme"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdX-WG-IJ4">
@@ -161,7 +161,7 @@
                                         </constraints>
                                         <state key="normal" title="Delet"/>
                                         <connections>
-                                            <action selector="fileSaveOrDelet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1dc-Bu-uKm"/>
+                                            <action selector="fileDeletInLocal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fsn-wp-RuW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHA-Ac-aun">

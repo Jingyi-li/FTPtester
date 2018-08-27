@@ -20,10 +20,9 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var filesListTableView: UITableView!
     
     
-//    var filesCount : Int = 0
+    var fileList = [FileObject]()
     var filesNameArray = [String]()
-//    var fileList = [FileObject]()
-    var filesFolderBool = [Bool]()
+    var filesSelected : Int?
 //    flagTableView = 1 means Cradle 2 means Local
     var flagTableView = 0
     
@@ -32,7 +31,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
 //    Initialization FilesProvider
     var ftpFileProvider : FTPFileProvider!
     let documentsProvider = LocalFileProvider(baseURL: FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!)
-//    let initLocalPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!)
+
     
 
     
@@ -41,9 +40,10 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         // Do any additional setup after loading the view, typically from a nib.
         filesListTableView.delegate = self
         filesListTableView.dataSource = self
-//        documentsProvider.delegate = self as FileProviderDelegate
+        documentsProvider.delegate = self as FileProviderDelegate
         initTextField()
         filesListTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,7 +84,27 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         getFielsInDirectiry(directoryPath: directoryPath.text ?? "/")
     }
     
-    @IBAction func fileSaveOrDelet(_ sender: Any) {
+    @IBAction func fileSaveToLocal(_ sender: Any) {
+        if flagTableView == 1 {
+            let nameString = "\(fileList[filesSelected!].name)"
+            print(nameString)
+            let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent(nameString)
+            var path = directoryPath.text ?? "/"
+            path.append(nameString)
+            print(path)
+            ftpFileProvider.copyItem(path: path, toLocalURL: fileURL, completionHandler: nil)
+        } else {
+            print("Please into Cradle view")
+        }
+    }
+    
+    @IBAction func fileDeletInLocal(_ sender: Any) {
+        if flagTableView == 2{
+            let nameString = "\(fileList[filesSelected!].name)"
+            documentsProvider.removeItem(path: nameString, completionHandler: nil)
+        } else {
+            print("Cannot remove items in Cradle")
+        }
     }
     
     
@@ -119,23 +139,17 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
             ftpFileProvider?.contentsOfDirectory(path: dirCurrentPath, completionHandler: { (contents, error) in
                 print(error)
                 
-                self.filesNameArray.removeAll()
-                self.filesFolderBool.removeAll()
                 self.fileList.removeAll()
+                self.filesNameArray.removeAll()
               
                 for file in contents {
+                    if file.isDirectory || (file.isRegularFile && file.name.hasPrefix("mdm") && file.name.hasSuffix(".bin")) {
+                        self.fileList.append(file)
+                        self.filesNameArray.append("\(file.name)")
+                    }
                     
-                    self.filesNameArray.append("\(file.name)")
-                    self.filesFolderBool.append(file.isDirectory)
-                    print("Name: \(file.name)")
-                    print("Folder or not : \(file.isDirectory)")
-//                    print("Type: \(file.type)")
-//                    print("Size: \(file.size)")
-//                    print("Creation Date: \(file.creationDate ?? Date())")
-//                    print("Modification Date: \(file.modifiedDate ?? Date())")
                 }
                
-                print(self.filesNameArray)
                 DispatchQueue.main.async {
                     self.filesListTableView.reloadData()
                 }
@@ -147,18 +161,13 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
                 print(error)
                 
                 self.filesNameArray.removeAll()
-                self.filesFolderBool.removeAll()
+                self.fileList.removeAll()
                 
                 for file in contents {
-                    self.filesNameArray.append("\(file.name)")
-                    self.filesFolderBool.append(file.isDirectory)
-                    
-                    print("Name: \(file.name)")
-                    print("Folder or not : \(file.isDirectory)")
-                    //                    print("Type: \(file.type)")
-                    //                    print("Size: \(file.size)")
-                    //                    print("Creation Date: \(file.creationDate ?? Date())")
-                    //                    print("Modification Date: \(file.modifiedDate ?? Date())")
+                    if file.isDirectory || file.isRegularFile {
+                        self.fileList.append(file)
+                        self.filesNameArray.append("\(file.name)")
+                    }
                 }
                 
                 print(self.filesNameArray)
@@ -192,10 +201,12 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(filesFolderBool[indexPath.row])
-        if filesFolderBool[indexPath.row]{
+        print(fileList[indexPath.row].isDirectory)
+        if fileList[indexPath.row].isDirectory{
             directoryPath.text = directoryPath.text! + filesNameArray[indexPath.row] + "/"
             getFielsInDirectiry(directoryPath: directoryPath.text ?? "/" )
+        } else if fileList[indexPath.row].isRegularFile{
+            filesSelected = indexPath.row
         }
         
         
