@@ -18,6 +18,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var urlInput: UITextField!
     @IBOutlet weak var directoryPath: UITextField!
     @IBOutlet weak var filesListTableView: UITableView!
+    @IBOutlet weak var copyProgress: UIProgressView!
     
     
     var fileList = [FileObject]()
@@ -41,8 +42,10 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         filesListTableView.delegate = self
         filesListTableView.dataSource = self
         documentsProvider.delegate = self as FileProviderDelegate
+//        ftpFileProvider.delegate = self as FileProviderDelegate
         initTextField()
-        filesListTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+//        filesListTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        filesListTableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         
     }
 
@@ -56,6 +59,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         let ftpCredential = getCredential()
         print(ftpCredential)
         initFTP(ftpCredential.userName, ftpCredential.passWord, ftpCredential.urlPath)
+        ftpFileProvider.delegate = self as FileProviderDelegate
         
     }
 //    Press the Dir Button to get the FileList from the directory
@@ -92,11 +96,14 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
             var path = directoryPath.text ?? "/"
             path.append(nameString)
             print(path)
-            ftpFileProvider.copyItem(path: path, toLocalURL: fileURL, completionHandler: nil)
+            copyProgress.observedProgress = ftpFileProvider.copyItem(path: path, toLocalURL: fileURL, completionHandler: nil)
+            
+            
         } else {
             print("Please into Cradle view")
         }
     }
+
     
     @IBAction func fileDeletInLocal(_ sender: Any) {
         if flagTableView == 2{
@@ -195,8 +202,13 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : UITableViewCell = self.filesListTableView.dequeueReusableCell(withIdentifier: "cell") as UITableViewCell!
-        cell.textLabel?.text = filesNameArray[indexPath.row]
+        
+        let file = fileList[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomCell
+        cell.setFileCell(file: file)
+        
+//        let cell : UITableViewCell = self.filesListTableView.dequeueReusableCell(withIdentifier: "cell") as UITableViewCell!
+//        cell.textLabel?.text = filesNameArray[indexPath.row]
         return cell
     }
     

@@ -248,6 +248,16 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="407"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="DPm-RN-HLM" customClass="CustomCell" customModule="FTPtester" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="295" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DPm-RN-HLM" id="kne-mQ-uJM" customClass="CustomCell" customModule="FTPtester" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="295" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
                                             </tableView>
                                         </subviews>
                                     </scrollView>
@@ -257,6 +267,13 @@
                                     <constraint firstAttribute="width" constant="295" id="ZNd-2l-e8j"/>
                                 </constraints>
                             </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1ND-eT-pOd">
+                                <rect key="frame" x="40" y="660" width="295" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="ERT-3g-tfB"/>
+                                    <constraint firstAttribute="height" constant="2" id="Tzp-dM-7oc"/>
+                                </constraints>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -268,6 +285,7 @@
                             <constraint firstItem="u6T-mO-0Pl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GhH-AM-NlK"/>
                             <constraint firstItem="hDw-Gs-UeO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O35-z9-f1k"/>
                             <constraint firstItem="u6T-mO-0Pl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Oxt-e7-ue9"/>
+                            <constraint firstItem="1ND-eT-pOd" firstAttribute="top" secondItem="rhd-zH-nAZ" secondAttribute="bottom" constant="3" id="R1C-Nj-2i7"/>
                             <constraint firstItem="aGu-Oc-ffd" firstAttribute="top" secondItem="cfs-z7-fMh" secondAttribute="bottom" id="Ryh-jo-Hb8"/>
                             <constraint firstItem="u6T-mO-0Pl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sl8-Ak-i52"/>
                             <constraint firstItem="rhd-zH-nAZ" firstAttribute="top" secondItem="qxa-yg-94a" secondAttribute="bottom" id="VAd-zf-O3D"/>
@@ -276,6 +294,7 @@
                             <constraint firstItem="hDw-Gs-UeO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="d9c-vI-m7e"/>
                             <constraint firstItem="qxa-yg-94a" firstAttribute="top" secondItem="aGu-Oc-ffd" secondAttribute="bottom" id="ede-oR-yen"/>
                             <constraint firstItem="hDw-Gs-UeO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jyO-dv-KiM"/>
+                            <constraint firstItem="1ND-eT-pOd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k6S-ro-OGS"/>
                             <constraint firstItem="hDw-Gs-UeO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rxr-Ip-LIH"/>
                             <constraint firstItem="aGu-Oc-ffd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tnS-1J-gY1"/>
                             <constraint firstItem="rhd-zH-nAZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yGX-XA-va4"/>
@@ -283,6 +302,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="copyProgress" destination="1ND-eT-pOd" id="UZL-QY-C7D"/>
                         <outlet property="directoryPath" destination="cfs-z7-fMh" id="IpA-nr-hxg"/>
                         <outlet property="filesListTableView" destination="ufu-RX-8FU" id="PXp-8D-GsM"/>
                         <outlet property="passwordInput" destination="tgG-YV-TQM" id="S6J-BF-Y1u"/>
