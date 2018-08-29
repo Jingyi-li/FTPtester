@@ -26,7 +26,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     var filesSelected : Int?
 //    flagTableView = 1 means Cradle 2 means Local
     var flagTableView = 0
-    var customView : Bool = false
+    let customView : Bool = true
     
     
 
@@ -49,6 +49,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
 //        filesListTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         filesListTableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         setupKeyboardDismissRecognizer()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,11 +59,11 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
 
 //   press the login button
     @IBAction func loginToCradleButton(_ sender: Any) {
+//        logInToCradle()
         let ftpCredential = getCredential()
         print(ftpCredential)
         initFTP(ftpCredential.userName, ftpCredential.passWord, ftpCredential.urlPath)
         ftpFileProvider.delegate = self as FileProviderDelegate
-        
     }
 //    Press the Dir Button to get the FileList from the directory
     @IBAction func dirCradleGetButton(_ sender: Any) {
@@ -140,6 +141,14 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         
         //need to print a confirm alert to show it already login
     }
+    
+    func logInToCradle() {
+        let ftpCredential = getCredential()
+        print(ftpCredential)
+        initFTP(ftpCredential.userName, ftpCredential.passWord, ftpCredential.urlPath)
+        ftpFileProvider.delegate = self as FileProviderDelegate
+
+    }
 
     
     func getFielsInDirectiry(directoryPath dirPath: String){
@@ -205,10 +214,10 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
             action: #selector(ViewController.dismissKeyboard))
-        
+        tapRecognizer.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tapRecognizer)
     }
-    
+
     @objc func dismissKeyboard()
     {
         view.endEditing(true)
@@ -226,8 +235,6 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomCell
         cell.setFileCell(file: file)
         
-//        let cell : UITableViewCell = self.filesListTableView.dequeueReusableCell(withIdentifier: "cell") as UITableViewCell!
-//        cell.textLabel?.text = filesNameArray[indexPath.row]
         return cell
     }
     

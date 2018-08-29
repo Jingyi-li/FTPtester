@@ -35,7 +35,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YhG-Aa-1yi" userLabel="UserText Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YhG-Aa-1yi" userLabel="UserText Field">
                                         <rect key="frame" x="56" y="20" width="131.5" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="hab-ca-3qc"/>
@@ -44,7 +44,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgG-YV-TQM" userLabel="PasswordText Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgG-YV-TQM" userLabel="PasswordText Field">
                                         <rect key="frame" x="227.5" y="20" width="131.5" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="3t8-s0-HAG"/>
@@ -99,6 +99,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="RJi-41-BBa" firstAttribute="leading" secondItem="0mb-XY-Sk1" secondAttribute="trailing" id="5KH-B9-qpR"/>
+                                    <constraint firstItem="tgG-YV-TQM" firstAttribute="top" secondItem="u6T-mO-0Pl" secondAttribute="top" constant="20" id="8EO-AJ-JFt"/>
                                     <constraint firstAttribute="trailing" secondItem="4EC-v4-yLH" secondAttribute="trailing" id="BXR-LH-Jsa"/>
                                     <constraint firstItem="0mb-XY-Sk1" firstAttribute="leading" secondItem="u6T-mO-0Pl" secondAttribute="leading" constant="16" id="EkB-E8-eFj"/>
                                     <constraint firstAttribute="height" constant="120" id="I3f-Ig-Q8S"/>
@@ -107,6 +108,7 @@
                                     <constraint firstItem="4NH-es-ch6" firstAttribute="leading" secondItem="u6T-mO-0Pl" secondAttribute="leading" constant="16" id="MRp-PW-h2g"/>
                                     <constraint firstItem="2EB-vC-Dw8" firstAttribute="top" secondItem="u6T-mO-0Pl" secondAttribute="top" constant="20" id="OSv-sq-llu"/>
                                     <constraint firstItem="tgG-YV-TQM" firstAttribute="width" secondItem="YhG-Aa-1yi" secondAttribute="width" id="Pvf-Zm-q4Q"/>
+                                    <constraint firstItem="YhG-Aa-1yi" firstAttribute="top" secondItem="u6T-mO-0Pl" secondAttribute="top" constant="20" id="S5h-3A-e8P"/>
                                     <constraint firstItem="4EC-v4-yLH" firstAttribute="leading" secondItem="u6T-mO-0Pl" secondAttribute="leading" id="Xmh-cN-GHC"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="Yvo-aO-8Yy"/>
                                     <constraint firstAttribute="trailing" secondItem="lHE-D9-807" secondAttribute="trailing" id="bsl-7k-kgr"/>
