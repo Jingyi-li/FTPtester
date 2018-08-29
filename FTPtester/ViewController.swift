@@ -18,7 +18,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var urlInput: UITextField!
     @IBOutlet weak var directoryPath: UITextField!
     @IBOutlet weak var filesListTableView: UITableView!
-    @IBOutlet weak var copyProgress: UIProgressView!
+
     
     
     var fileList = [FileObject]()
@@ -26,6 +26,8 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     var filesSelected : Int?
 //    flagTableView = 1 means Cradle 2 means Local
     var flagTableView = 0
+    var customView : Bool = false
+    
     
 
     
@@ -96,7 +98,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
             var path = directoryPath.text ?? "/"
             path.append(nameString)
             print(path)
-//            copyProgress.observedProgress = ftpFileProvider.copyItem(path: path, toLocalURL: fileURL, completionHandler: nil)
+
             let cell = self.filesListTableView.cellForRow(at: IndexPath(row: filesSelected!, section: 0)) as? CustomCell
             cell?.fileProcess.observedProgress = ftpFileProvider.copyItem(path: path, toLocalURL: fileURL, completionHandler: nil)
             
