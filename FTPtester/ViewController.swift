@@ -44,11 +44,13 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         filesListTableView.delegate = self
         filesListTableView.dataSource = self
         documentsProvider.delegate = self as FileProviderDelegate
-//        ftpFileProvider.delegate = self as FileProviderDelegate
         initTextField()
-//        filesListTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         filesListTableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         setupKeyboardDismissRecognizer()
+        
+        if customView {
+            directoryPath.isHidden = true
+        }
 
     }
 
@@ -59,31 +61,21 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
 
 //   press the login button
     @IBAction func loginToCradleButton(_ sender: Any) {
-//        logInToCradle()
-        let ftpCredential = getCredential()
-        print(ftpCredential)
-        initFTP(ftpCredential.userName, ftpCredential.passWord, ftpCredential.urlPath)
-        ftpFileProvider.delegate = self as FileProviderDelegate
+        logInToCradle()
+        flagTableView = 1
+        getDirectory()
+
     }
 //    Press the Dir Button to get the FileList from the directory
     @IBAction func dirCradleGetButton(_ sender: Any) {
         flagTableView = 1
-//        directoryPath.text = "/"
-//        print(directoryPath.text)
-//        let dirPath = directoryPath.text
-        let dirPath = "/"
-        directoryPath.text = dirPath
-        getFielsInDirectiry(directoryPath: dirPath)
-
+        getDirectory()
+        
     }
 
     @IBAction func dirLocalGetButton(_ sender: Any) {
         flagTableView = 2
-        let dirPath = "/"
-        directoryPath.text = dirPath
-        print(FileManager.default.urls)
-        getFielsInDirectiry(directoryPath: dirPath)
-        
+        getDirectory()
     }
     
     @IBAction func dirBackButton(_ sender: Any) {
@@ -149,6 +141,13 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         ftpFileProvider.delegate = self as FileProviderDelegate
 
     }
+    
+    func getDirectory() {
+        let dirPath = "/"
+        directoryPath.text = dirPath
+        getFielsInDirectiry(directoryPath: dirPath)
+    }
+    
 
     
     func getFielsInDirectiry(directoryPath dirPath: String){
@@ -234,6 +233,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         let file = fileList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomCell
         cell.setFileCell(file: file)
+//        cell.backgroundColor = UIColor.groupTableViewBackground
         
         return cell
     }

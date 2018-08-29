@@ -21,8 +21,10 @@ class CustomCell: UITableViewCell {
         fileProcess.progress = 0
         if file.isDirectory{
             fileSize.text = "Directory"
+            fileImage.image = UIImage(named: "folder")
         }else {
             fileSize.text = "Size: \(file.size)"
+            fileImage.image = UIImage(named: "fileB")
         }
         
     }
