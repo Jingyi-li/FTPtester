@@ -37,12 +37,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     </imageView>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MYb-TO-Vct">
+                        <rect key="frame" x="50" y="37" width="254" height="2"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </progressView>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="fileImage" destination="sho-rM-Yz7" id="dS0-uU-B2h"/>
                 <outlet property="fileName" destination="Nag-6X-gq1" id="cf4-B8-a9Q"/>
+                <outlet property="fileProcess" destination="MYb-TO-Vct" id="LQy-fb-3zw"/>
                 <outlet property="fileSize" destination="7np-If-Ayp" id="zQg-GQ-7tW"/>
             </connections>
             <point key="canvasLocation" x="-447" y="94"/>

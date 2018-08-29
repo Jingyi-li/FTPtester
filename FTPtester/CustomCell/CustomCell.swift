@@ -13,11 +13,12 @@ class CustomCell: UITableViewCell {
     
     @IBOutlet weak var fileName: UILabel!
     @IBOutlet weak var fileSize: UILabel!
-//    @IBOutlet weak var fileProcess: UIProgressView!
+    @IBOutlet weak var fileProcess: UIProgressView!
     @IBOutlet weak var fileImage: UIImageView!
     
     func setFileCell(file: FileObject){
         fileName.text = file.name
+        fileProcess.progress = 0
         if file.isDirectory{
             fileSize.text = "Directory"
         }else {

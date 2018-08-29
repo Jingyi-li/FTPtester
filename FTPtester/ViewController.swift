@@ -46,7 +46,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         initTextField()
 //        filesListTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         filesListTableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
-        
+        setupKeyboardDismissRecognizer()
     }
 
     override func didReceiveMemoryWarning() {
@@ -96,7 +96,9 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
             var path = directoryPath.text ?? "/"
             path.append(nameString)
             print(path)
-            copyProgress.observedProgress = ftpFileProvider.copyItem(path: path, toLocalURL: fileURL, completionHandler: nil)
+//            copyProgress.observedProgress = ftpFileProvider.copyItem(path: path, toLocalURL: fileURL, completionHandler: nil)
+            let cell = self.filesListTableView.cellForRow(at: IndexPath(row: filesSelected!, section: 0)) as? CustomCell
+            cell?.fileProcess.observedProgress = ftpFileProvider.copyItem(path: path, toLocalURL: fileURL, completionHandler: nil)
             
             
         } else {
@@ -196,6 +198,21 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         }
         return dirReturnPath
     }
+    
+    func setupKeyboardDismissRecognizer(){
+        let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(ViewController.dismissKeyboard))
+        
+        self.view.addGestureRecognizer(tapRecognizer)
+    }
+    
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
+
+
 //    filesListTableView UITableView Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filesNameArray.count
