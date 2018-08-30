@@ -107,6 +107,11 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
         }
     }
     
+    @IBAction func logoutButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     
 // functions
     func getCredential() -> (userName: String, passWord: String, urlPath: String){
