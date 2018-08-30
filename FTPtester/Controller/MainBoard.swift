@@ -222,7 +222,8 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
         
         let file = fileList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomCell
-        cell.setFileCell(file: file)
+        cell.setFileCell(file: file, flag: flagTableView)
+        
 //        cell.backgroundColor = UIColor.groupTableViewBackground
         
         return cell
