@@ -10,12 +10,10 @@ import UIKit
 import FilesProvider
 
 
-class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSource, FileProviderDelegate{
+class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, FileProviderDelegate{
+    
 
 
-    @IBOutlet weak var userNameInput: UITextField!
-    @IBOutlet weak var passwordInput: UITextField!
-    @IBOutlet weak var urlInput: UITextField!
     @IBOutlet weak var directoryPath: UITextField!
     @IBOutlet weak var filesListTableView: UITableView!
 
@@ -25,8 +23,9 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     var filesNameArray = [String]()
     var filesSelected : Int?
 //    flagTableView = 1 means Cradle 2 means Local
-    var flagTableView = 0
+    var flagTableView = 1
     let customView : Bool = true
+    var cradle = ["userName" : "", "password": "", "url": ""]
     
     
 
@@ -44,13 +43,15 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         filesListTableView.delegate = self
         filesListTableView.dataSource = self
         documentsProvider.delegate = self as FileProviderDelegate
-        initTextField()
+//        initTextField()
         filesListTableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         setupKeyboardDismissRecognizer()
         
         if customView {
             directoryPath.isHidden = true
         }
+        logInToCradle()
+        getDirectory()
 
     }
 
@@ -58,14 +59,9 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-//   press the login button
-    @IBAction func loginToCradleButton(_ sender: Any) {
-        logInToCradle()
-        flagTableView = 1
-        getDirectory()
-
-    }
+    
+    
+   
 //    Press the Dir Button to get the FileList from the directory
     @IBAction func dirCradleGetButton(_ sender: Any) {
         flagTableView = 1
@@ -114,18 +110,12 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     
 // functions
     func getCredential() -> (userName: String, passWord: String, urlPath: String){
-        let userName : String = userNameInput.text ?? "pi"
-        let passWord : String = passwordInput.text ?? "Mba287xd!"
-        let urlPath : String = urlInput.text ?? "ftp://192.168.50.10:21"
+        let userName : String = cradle["userName"]!
+        let passWord : String = cradle["password"]!
+        let urlPath : String = cradle["url"]!
         return (userName, passWord, urlPath)
     }
     
-    func initTextField(){
-        userNameInput.text = "pi"
-        passwordInput.text = "Mba287xd!"
-        urlInput.text = "ftp://192.168.50.10:21"
-        directoryPath.text = "/"
-    }
     
     func initFTP(_ userName : String, _ passWord : String, _ urlPath : String){
         let credential = URLCredential(user: userName, password: passWord, persistence: .permanent)
@@ -212,7 +202,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     func setupKeyboardDismissRecognizer(){
         let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
-            action: #selector(ViewController.dismissKeyboard))
+            action: #selector(MainBoard.dismissKeyboard))
         tapRecognizer.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tapRecognizer)
     }
@@ -280,6 +270,8 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
             break
         }
     }
+    
+
 
 
     

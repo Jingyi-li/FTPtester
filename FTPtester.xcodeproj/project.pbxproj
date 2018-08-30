@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		BE361F3A961E472B4D29C84A /* Pods_FTPtester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DA7C403D8B4651401AF905 /* Pods_FTPtester.framework */; };
 		F1A891E9212CD61000633EFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A891E8212CD61000633EFC /* AppDelegate.swift */; };
-		F1A891EB212CD61000633EFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A891EA212CD61000633EFC /* ViewController.swift */; };
+		F1A891EB212CD61000633EFC /* MainBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A891EA212CD61000633EFC /* MainBoard.swift */; };
 		F1A891EE212CD61000633EFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A891EC212CD61000633EFC /* Main.storyboard */; };
 		F1A891F0212CD61000633EFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1A891EF212CD61000633EFC /* Assets.xcassets */; };
 		F1A891F3212CD61000633EFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A891F1212CD61000633EFC /* LaunchScreen.storyboard */; };
 		F1B0BE0B2134153200C2A977 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B0BE092134153200C2A977 /* CustomCell.swift */; };
 		F1B0BE0C2134153200C2A977 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1B0BE0A2134153200C2A977 /* CustomCell.xib */; };
+		F1D02B77213780E8007D6E5C /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D02B76213780E8007D6E5C /* LoginPageViewController.swift */; };
 		F1F3C581212CDCB30062771F /* FilesProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F3C582212CDCB30062771F /* FilesProvider.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,13 +26,14 @@
 		F16023FC212FB513009C6EB4 /* FTPtester.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FTPtester.entitlements; sourceTree = "<group>"; };
 		F1A891E5212CD61000633EFC /* FTPtester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTPtester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A891E8212CD61000633EFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F1A891EA212CD61000633EFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F1A891EA212CD61000633EFC /* MainBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBoard.swift; sourceTree = "<group>"; };
 		F1A891ED212CD61000633EFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1A891EF212CD61000633EFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1A891F2212CD61000633EFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1A891F4212CD61000633EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1B0BE092134153200C2A977 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		F1B0BE0A2134153200C2A977 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		F1D02B76213780E8007D6E5C /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		F1F3C582212CDCB30062771F /* FilesProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FilesProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,11 +89,10 @@
 		F1A891E7212CD61000633EFC /* FTPtester */ = {
 			isa = PBXGroup;
 			children = (
+				F1D02B7121376C39007D6E5C /* Controller */,
+				F1D02B7021376C04007D6E5C /* View */,
 				F1B0BE082134150500C2A977 /* CustomCell */,
 				F16023FC212FB513009C6EB4 /* FTPtester.entitlements */,
-				F1A891E8212CD61000633EFC /* AppDelegate.swift */,
-				F1A891EA212CD61000633EFC /* ViewController.swift */,
-				F1A891EC212CD61000633EFC /* Main.storyboard */,
 				F1A891EF212CD61000633EFC /* Assets.xcassets */,
 				F1A891F1212CD61000633EFC /* LaunchScreen.storyboard */,
 				F1A891F4212CD61000633EFC /* Info.plist */,
@@ -106,6 +107,24 @@
 				F1B0BE0A2134153200C2A977 /* CustomCell.xib */,
 			);
 			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		F1D02B7021376C04007D6E5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1A891EC212CD61000633EFC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1D02B7121376C39007D6E5C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1A891E8212CD61000633EFC /* AppDelegate.swift */,
+				F1A891EA212CD61000633EFC /* MainBoard.swift */,
+				F1D02B76213780E8007D6E5C /* LoginPageViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +156,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Jingyi LI";
 				TargetAttributes = {
 					F1A891E4212CD61000633EFC = {
@@ -227,8 +246,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1A891EB212CD61000633EFC /* ViewController.swift in Sources */,
+				F1A891EB212CD61000633EFC /* MainBoard.swift in Sources */,
 				F1B0BE0B2134153200C2A977 /* CustomCell.swift in Sources */,
+				F1D02B77213780E8007D6E5C /* LoginPageViewController.swift in Sources */,
 				F1A891E9212CD61000633EFC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +289,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -276,6 +297,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -303,7 +325,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -326,6 +348,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -333,6 +356,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -354,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
