@@ -54,8 +54,21 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
     @IBAction func loginToCradle(_ sender: Any) {
         
         logInToCradle()
-        
-        performSegue(withIdentifier: "loginToMainBoard", sender: self)
+        ftpFileProvider?.loginToFtp(completionHandler: { (error) in
+            let message = error.debugDescription
+            if let error = error {
+                
+                let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+//            else {
+//                DispatchQueue.main.async {
+//                    self.performSegue(withIdentifier: "loginToMainBoard", sender: self)
+//                }
+//            }
+        })
+//        performSegue(withIdentifier: "loginToMainBoard", sender: self)
         
     }
     
@@ -87,8 +100,9 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
     func initFTP(_ userName : String, _ passWord : String, _ urlPath : String){
         
         let credential = URLCredential(user: userName, password: passWord, persistence: .permanent)
+
         ftpFileProvider = FTPFileProvider(baseURL: URL(string: urlPath)!, credential: credential)
-//        print(Thread.callStackSymbols)
+
         //need to print a confirm alert to show it already login
     }
     

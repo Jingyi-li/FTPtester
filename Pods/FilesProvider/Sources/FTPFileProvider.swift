@@ -118,6 +118,18 @@ open class FTPFileProvider: NSObject, FileProviderBasicRemote, FileProviderOpera
         super.init()
     }
     
+    open func loginToFtp(completionHandler: @escaping ( _ error: Error?) -> Void) {
+        let task = session.fpstreamTask(withHostName: baseURL!.host!, port: baseURL!.port!)
+        self.ftpLogin(task) { (error) in
+            if let error = error {
+                self.dispatch_queue.async {
+                    completionHandler(error)
+                }
+                return
+            }
+        }
+    }
+    
     /**
      **DEPRECATED** Initializer for FTP provider with given username and password.
      
