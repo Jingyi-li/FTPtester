@@ -25,7 +25,7 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
 //    flagTableView = 1 means Cradle 2 means Local
     var flagTableView = 1
     var customView : Bool = true
-    var cradle = ["userName" : "", "password": "", "url": ""]
+//    var cradle = ["userName" : "", "password": "", "url": ""]
     
     
 
@@ -50,7 +50,6 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
         if customView {
             directoryPath.isHidden = true
         }
-        logInToCradle()
         getDirectory()
 
     }
@@ -129,28 +128,6 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
     
     
 // functions
-    func getCredential() -> (userName: String, passWord: String, urlPath: String){
-        let userName : String = cradle["userName"]!
-        let passWord : String = cradle["password"]!
-        let urlPath : String = cradle["url"]!
-        return (userName, passWord, urlPath)
-    }
-    
-    
-    func initFTP(_ userName : String, _ passWord : String, _ urlPath : String){
-        let credential = URLCredential(user: userName, password: passWord, persistence: .permanent)
-        ftpFileProvider = FTPFileProvider(baseURL: URL(string: urlPath)!, credential: credential)
-        
-        //need to print a confirm alert to show it already login
-    }
-    
-    func logInToCradle() {
-        let ftpCredential = getCredential()
-        print(ftpCredential)
-        initFTP(ftpCredential.userName, ftpCredential.passWord, ftpCredential.urlPath)
-        ftpFileProvider.delegate = self as FileProviderDelegate
-
-    }
     
     func getDirectory() {
        

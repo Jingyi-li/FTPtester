@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import FilesProvider
 
 
 
-class LoginPageViewController: UIViewController {
+class LoginPageViewController: UIViewController, FileProviderDelegate {
+    
+    var ftpFileProvider: FTPFileProvider?
     
 
     
@@ -37,10 +40,8 @@ class LoginPageViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "loginToMainBoard" {
             let MainBoardVC = segue.destination as! MainBoard
-            
-            MainBoardVC.cradle["userName"] = userNameInput.text ?? "pi"
-            MainBoardVC.cradle["password"] = passwordInput.text ?? "Mba287xd!"
-            MainBoardVC.cradle["url"] = urlInput.text ?? "ftp://192.168.50.10:21"
+
+            MainBoardVC.ftpFileProvider = ftpFileProvider
             MainBoardVC.customView = customCheckbox.isChecked
             
         }
@@ -51,6 +52,8 @@ class LoginPageViewController: UIViewController {
     }
     
     @IBAction func loginToCradle(_ sender: Any) {
+        
+        logInToCradle()
         
         performSegue(withIdentifier: "loginToMainBoard", sender: self)
         
@@ -64,6 +67,34 @@ class LoginPageViewController: UIViewController {
         
     }
     
+//    Login to Cradle
+    func logInToCradle() {
+        let ftpCredential = getCredential()
+//        print(ftpCredential)
+        initFTP(ftpCredential.userName, ftpCredential.passWord, ftpCredential.urlPath)
+        ftpFileProvider?.delegate = self as FileProviderDelegate
+        
+    }
+    
+    func getCredential() -> (userName: String, passWord: String, urlPath: String){
+        let userName : String = userNameInput.text ?? "pi"
+        let passWord : String = passwordInput.text ?? "Mba287xd!"
+        let urlPath : String = urlInput.text ?? "ftp://192.168.50.10:21"
+        return (userName, passWord, urlPath)
+    }
+    
+
+    func initFTP(_ userName : String, _ passWord : String, _ urlPath : String){
+        
+        let credential = URLCredential(user: userName, password: passWord, persistence: .permanent)
+        ftpFileProvider = FTPFileProvider(baseURL: URL(string: urlPath)!, credential: credential)
+//        print(Thread.callStackSymbols)
+        //need to print a confirm alert to show it already login
+    }
+    
+   
+    
+//    checkbox layout
     func customCheckboxLayout (checkbox: Checkbox){
         checkbox.checkboxBackgroundColor = .clear
 //        checkbox.uncheckedBorderColor = .clear
@@ -72,6 +103,7 @@ class LoginPageViewController: UIViewController {
         checkbox.checkmarkStyle = .tick
         
     }
+    
     func setupKeyboardDismissRecognizer(){
         let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
@@ -84,6 +116,42 @@ class LoginPageViewController: UIViewController {
     {
         view.endEditing(true)
     }
+    
+    
+    
+    
+    //    fileProviderDelegate
+    func fileproviderSucceed(_ fileProvider: FileProviderOperations, operation: FileOperationType) {
+        switch operation {
+        case .copy(source: let source, destination: let dest):
+            print("\(source) copied to \(dest).")
+        case .remove(path: let path):
+            print("\(path) has been deleted.")
+        default:
+            print("\(operation.actionDescription) from \(operation.source) to \(operation.destination) succeed")
+        }
+    }
+    
+    func fileproviderFailed(_ fileProvider: FileProviderOperations, operation: FileOperationType, error: Error) {
+        switch operation {
+        case .copy(source: let source, destination: let dest):
+            print("copy of \(source) failed.")
+        case .remove:
+            print("file can't be deleted.")
+        default:
+            print("\(operation.actionDescription) from \(operation.source) to \(operation.destination) failed")
+        }
+    }
+    
+    func fileproviderProgress(_ fileProvider: FileProviderOperations, operation: FileOperationType, progress: Float) {
+        switch operation {
+        case .copy(source: let source, destination: let dest):
+            print("Copy\(source) to \(dest): \(progress * 100) completed.")
+        default:
+            break
+        }
+    }
+    
 
 
     /*
