@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE361F3A961E472B4D29C84A /* Pods_FTPtester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DA7C403D8B4651401AF905 /* Pods_FTPtester.framework */; };
+		F1153DB72138CBB0003B3712 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1153DB62138CBB0003B3712 /* Checkbox.swift */; };
 		F1A891E9212CD61000633EFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A891E8212CD61000633EFC /* AppDelegate.swift */; };
 		F1A891EB212CD61000633EFC /* MainBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A891EA212CD61000633EFC /* MainBoard.swift */; };
 		F1A891EE212CD61000633EFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A891EC212CD61000633EFC /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		83542425427EF856F162566D /* Pods-FTPtester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTPtester.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FTPtester/Pods-FTPtester.debug.xcconfig"; sourceTree = "<group>"; };
 		A570AED74517868E5B9AB160 /* Pods-FTPtester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTPtester.release.xcconfig"; path = "Pods/Target Support Files/Pods-FTPtester/Pods-FTPtester.release.xcconfig"; sourceTree = "<group>"; };
 		A9DA7C403D8B4651401AF905 /* Pods_FTPtester.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FTPtester.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1153DB62138CBB0003B3712 /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		F16023FC212FB513009C6EB4 /* FTPtester.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FTPtester.entitlements; sourceTree = "<group>"; };
 		F1A891E5212CD61000633EFC /* FTPtester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTPtester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A891E8212CD61000633EFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F1153DB52138CB83003B3712 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1153DB62138CBB0003B3712 /* Checkbox.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F1A891DC212CD61000633EFC = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +99,7 @@
 		F1A891E7212CD61000633EFC /* FTPtester */ = {
 			isa = PBXGroup;
 			children = (
+				F1153DB52138CB83003B3712 /* Model */,
 				F1D02B7121376C39007D6E5C /* Controller */,
 				F1D02B7021376C04007D6E5C /* View */,
 				F1B0BE082134150500C2A977 /* CustomCell */,
@@ -250,6 +261,7 @@
 				F1B0BE0B2134153200C2A977 /* CustomCell.swift in Sources */,
 				F1D02B77213780E8007D6E5C /* LoginPageViewController.swift in Sources */,
 				F1A891E9212CD61000633EFC /* AppDelegate.swift in Sources */,
+				F1153DB72138CBB0003B3712 /* Checkbox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

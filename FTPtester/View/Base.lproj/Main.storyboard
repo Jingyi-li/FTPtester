@@ -227,10 +227,10 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mj-y0-sSI" userLabel="loginView">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="130"/>
+                                        <rect key="frame" x="0.0" y="140" width="375" height="110"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHE-D9-807">
-                                                <rect key="frame" x="142.5" y="45" width="90" height="40"/>
+                                                <rect key="frame" x="142.5" y="35" width="90" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="UIT-bx-sL2"/>
                                                     <constraint firstAttribute="width" constant="90" id="laO-HX-8de"/>
@@ -276,13 +276,28 @@
                                             <constraint firstAttribute="height" constant="30" id="p3F-Nf-g8g"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4TD-n7-GDB" customClass="Checkbox" customModule="FTPtester" customModuleProvider="target">
+                                        <rect key="frame" x="72" y="110" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="customCheckbox:" destination="kWI-Du-Xse" eventType="valueChanged" id="4TM-18-uyr"/>
+                                        </connections>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CustomVIew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMm-xi-Pi1">
+                                        <rect key="frame" x="105" y="110" width="96" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="YhG-Aa-1yi" firstAttribute="leading" secondItem="kOe-pF-Tyn" secondAttribute="trailing" id="1Gw-bU-t64"/>
                                     <constraint firstItem="kOe-pF-Tyn" firstAttribute="top" secondItem="u6T-mO-0Pl" secondAttribute="top" constant="20" id="1Xr-9l-7qW"/>
                                     <constraint firstItem="tgG-YV-TQM" firstAttribute="top" secondItem="u6T-mO-0Pl" secondAttribute="top" constant="20" id="8EO-AJ-JFt"/>
                                     <constraint firstItem="1mj-y0-sSI" firstAttribute="leading" secondItem="u6T-mO-0Pl" secondAttribute="leading" id="8WS-y7-e7c"/>
-                                    <constraint firstItem="1mj-y0-sSI" firstAttribute="top" secondItem="RJi-41-BBa" secondAttribute="bottom" constant="20" id="A63-0V-sgu"/>
+                                    <constraint firstItem="1mj-y0-sSI" firstAttribute="top" secondItem="RJi-41-BBa" secondAttribute="bottom" constant="40" id="A63-0V-sgu"/>
                                     <constraint firstAttribute="trailing" secondItem="4EC-v4-yLH" secondAttribute="trailing" id="BXR-LH-Jsa"/>
                                     <constraint firstItem="3rx-pW-CzB" firstAttribute="top" secondItem="kOe-pF-Tyn" secondAttribute="bottom" constant="20" id="CnQ-aU-aC9"/>
                                     <constraint firstAttribute="width" constant="375" id="ELA-1T-1H3"/>
@@ -325,6 +340,7 @@
                         <viewLayoutGuide key="safeArea" id="02k-Vf-nfu"/>
                     </view>
                     <connections>
+                        <outlet property="customCheckbox" destination="4TD-n7-GDB" id="SVt-yg-AW2"/>
                         <outlet property="passwordInput" destination="tgG-YV-TQM" id="TGU-Lu-msS"/>
                         <outlet property="urlInput" destination="RJi-41-BBa" id="3VG-o9-J3a"/>
                         <outlet property="userNameInput" destination="YhG-Aa-1yi" id="wOJ-BQ-3GF"/>

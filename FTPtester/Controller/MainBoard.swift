@@ -24,7 +24,7 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
     var filesSelected : Int?
 //    flagTableView = 1 means Cradle 2 means Local
     var flagTableView = 1
-    let customView : Bool = true
+    var customView : Bool = true
     var cradle = ["userName" : "", "password": "", "url": ""]
     
     
@@ -153,7 +153,9 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
     }
     
     func getDirectory() {
+       
         let dirPath = "/"
+        
         directoryPath.text = dirPath
         getFielsInDirectiry(directoryPath: dirPath)
     }
@@ -161,9 +163,13 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
 
     
     func getFielsInDirectiry(directoryPath dirPath: String){
-        let dirCurrentPath : String = dirPath
+        var dirCurrentPath : String = dirPath
         
         if flagTableView == 1 {
+            if customView {
+                dirCurrentPath = "/dorsaVi/BinFiles/"
+                directoryPath.text = dirCurrentPath
+            }
 
             ftpFileProvider?.contentsOfDirectory(path: dirCurrentPath, completionHandler: { (contents, error) in
                 print(error)

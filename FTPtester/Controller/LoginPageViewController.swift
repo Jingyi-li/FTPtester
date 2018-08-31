@@ -18,11 +18,13 @@ class LoginPageViewController: UIViewController {
     @IBOutlet weak var userNameInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var urlInput: UITextField!
-
+    @IBOutlet weak var customCheckbox: Checkbox!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        initTextField()
+        initLoginPage()
         setupKeyboardDismissRecognizer()
+        customCheckboxLayout(checkbox: customCheckbox)
 
         // Do any additional setup after loading the view.
     }
@@ -39,21 +41,37 @@ class LoginPageViewController: UIViewController {
             MainBoardVC.cradle["userName"] = userNameInput.text ?? "pi"
             MainBoardVC.cradle["password"] = passwordInput.text ?? "Mba287xd!"
             MainBoardVC.cradle["url"] = urlInput.text ?? "ftp://192.168.50.10:21"
+            MainBoardVC.customView = customCheckbox.isChecked
             
         }
     }
+    
+    @IBAction func customCheckbox(_ sender: Checkbox) {
+//        print("checkbox value change: \(sender.isChecked)")
+    }
+    
     @IBAction func loginToCradle(_ sender: Any) {
         
         performSegue(withIdentifier: "loginToMainBoard", sender: self)
         
     }
     
-    func initTextField(){
+    func initLoginPage(){
         userNameInput.text = "pi"
         passwordInput.text = "Mba287xd!"
         urlInput.text = "ftp://192.168.50.10:21"
+        customCheckbox.isChecked = true
+        
     }
     
+    func customCheckboxLayout (checkbox: Checkbox){
+        checkbox.checkboxBackgroundColor = .clear
+//        checkbox.uncheckedBorderColor = .clear
+//        checkbox.checkedBorderColor = .clear
+        checkbox.borderStyle = .circle
+        checkbox.checkmarkStyle = .tick
+        
+    }
     func setupKeyboardDismissRecognizer(){
         let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
