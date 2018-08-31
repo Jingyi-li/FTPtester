@@ -22,6 +22,7 @@ class LoginPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initTextField()
+        setupKeyboardDismissRecognizer()
 
         // Do any additional setup after loading the view.
     }
@@ -51,6 +52,19 @@ class LoginPageViewController: UIViewController {
         userNameInput.text = "pi"
         passwordInput.text = "Mba287xd!"
         urlInput.text = "ftp://192.168.50.10:21"
+    }
+    
+    func setupKeyboardDismissRecognizer(){
+        let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(LoginPageViewController.dismissKeyboard))
+        
+        self.view.addGestureRecognizer(tapRecognizer)
+    }
+    
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
     }
 
 

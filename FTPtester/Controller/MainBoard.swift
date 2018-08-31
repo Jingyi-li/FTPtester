@@ -81,30 +81,45 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
     
     @IBAction func fileSaveToLocal(_ sender: Any) {
         if flagTableView == 1 {
-            let nameString = "\(fileList[filesSelected!].name)"
-            print(nameString)
-            let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent(nameString)
-            var path = directoryPath.text ?? "/"
-            path.append(nameString)
-            print(path)
+            if let row = filesSelected {
+                let nameString = "\(fileList[row].name)"
+                print(nameString)
+                let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent(nameString)
+                var path = directoryPath.text ?? "/"
+                path.append(nameString)
+                print(path)
 
-            let cell = self.filesListTableView.cellForRow(at: IndexPath(row: filesSelected!, section: 0)) as? CustomCell
-            cell?.fileProcess.observedProgress = ftpFileProvider.copyItem(path: path, toLocalURL: fileURL, completionHandler: nil)
+                let cell = self.filesListTableView.cellForRow(at: IndexPath(row: filesSelected!, section: 0)) as? CustomCell
+                cell?.fileProcess.observedProgress = ftpFileProvider.copyItem(path: path, toLocalURL: fileURL, completionHandler: nil)
+            } else {
+                let alert = UIAlertController(title: "Alert", message: "No BinFile Chosen in Cradle", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
             
             
         } else {
             print("Please into Cradle view")
         }
+        filesSelected = nil
     }
 
     
     @IBAction func fileDeletInLocal(_ sender: Any) {
         if flagTableView == 2{
-            let nameString = "\(fileList[filesSelected!].name)"
-            documentsProvider.removeItem(path: nameString, completionHandler: nil)
+            if let row = filesSelected {
+                let nameString = "\(fileList[row].name)"
+                documentsProvider.removeItem(path: nameString, completionHandler: nil)
+            } else {
+                let alert = UIAlertController(title: "Alert", message: "No BinFile Chosen in Local", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
         } else {
             print("Cannot remove items in Cradle")
         }
+        filesSelected = nil
+        getDirectory()
     }
     
     @IBAction func logoutButton(_ sender: Any) {
