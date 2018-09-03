@@ -8,6 +8,7 @@
 
 import UIKit
 import FilesProvider
+import Foundation
 
 
 
@@ -55,18 +56,22 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
         
         logInToCradle()
         ftpFileProvider?.loginToFtp(completionHandler: { (error) in
-            let message = error.debugDescription
-            if let error = error {
+            let message = self.errorDeclar(error.debugDescription)
+//            let message = error.debugDescription
+            if error != nil {
                 
                 let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+//                self.present(alert, animated: true, completion: nil)
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
-//            else {
-//                DispatchQueue.main.async {
-//                    self.performSegue(withIdentifier: "loginToMainBoard", sender: self)
-//                }
-//            }
+            else {
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "loginToMainBoard", sender: self)
+                }
+            }
         })
 //        performSegue(withIdentifier: "loginToMainBoard", sender: self)
         
@@ -165,6 +170,19 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
             break
         }
     }
+//    make error readable to user
+    func errorDeclar(_ error: String)-> String {
+        var message: String?
+        if error.contains("Login authentication failed") {
+            message = "Username or Password is wrong!"
+        } else if error.contains("NSErrorFailingURLKey") {
+            message = "Disconnect with Cradle"
+        } else {
+            message = error
+        }
+        return message!
+    }
+   
     
 
 
