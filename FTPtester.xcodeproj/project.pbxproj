@@ -17,6 +17,7 @@
 		F1B0BE0B2134153200C2A977 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B0BE092134153200C2A977 /* CustomCell.swift */; };
 		F1B0BE0C2134153200C2A977 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1B0BE0A2134153200C2A977 /* CustomCell.xib */; };
 		F1D02B77213780E8007D6E5C /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D02B76213780E8007D6E5C /* LoginPageViewController.swift */; };
+		F1DB1CEB213CEF84000FB050 /* LoginToDropboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DB1CEA213CEF84000FB050 /* LoginToDropboxViewController.swift */; };
 		F1F3C581212CDCB30062771F /* FilesProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F3C582212CDCB30062771F /* FilesProvider.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		F1B0BE092134153200C2A977 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		F1B0BE0A2134153200C2A977 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		F1D02B76213780E8007D6E5C /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		F1DB1CEA213CEF84000FB050 /* LoginToDropboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginToDropboxViewController.swift; sourceTree = "<group>"; };
 		F1F3C582212CDCB30062771F /* FilesProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FilesProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,6 +136,7 @@
 				F1A891E8212CD61000633EFC /* AppDelegate.swift */,
 				F1A891EA212CD61000633EFC /* MainBoard.swift */,
 				F1D02B76213780E8007D6E5C /* LoginPageViewController.swift */,
+				F1DB1CEA213CEF84000FB050 /* LoginToDropboxViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				F1A891EB212CD61000633EFC /* MainBoard.swift in Sources */,
 				F1B0BE0B2134153200C2A977 /* CustomCell.swift in Sources */,
+				F1DB1CEB213CEF84000FB050 /* LoginToDropboxViewController.swift in Sources */,
 				F1D02B77213780E8007D6E5C /* LoginPageViewController.swift in Sources */,
 				F1A891E9212CD61000633EFC /* AppDelegate.swift in Sources */,
 				F1153DB72138CBB0003B3712 /* Checkbox.swift in Sources */,

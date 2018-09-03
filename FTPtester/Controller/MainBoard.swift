@@ -125,6 +125,9 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func segueToDropboxLoginView(_ sender: Any) {
+        performSegue(withIdentifier: "loginToDropbox", sender: self)
+    }
     
     
 // functions
