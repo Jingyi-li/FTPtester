@@ -1,16 +1,20 @@
 PODS:
   - FilesProvider (0.25.1)
+  - OAuthSwift (1.2.2)
 
 DEPENDENCIES:
   - FilesProvider
+  - OAuthSwift (~> 1.2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - FilesProvider
+    - OAuthSwift
 
 SPEC CHECKSUMS:
   FilesProvider: f6ab75211d2fd4814720f19b427e43668dc24585
+  OAuthSwift: 27b34fe80b76b67cd8f45571e0be2432bc9f6de1
 
-PODFILE CHECKSUM: eb513206f7e5f62575dd5a7456d926a96d5b6812
+PODFILE CHECKSUM: 7a6d6fca099cef7c3a1cf23a3620396a6558deee
 
 COCOAPODS: 1.5.3

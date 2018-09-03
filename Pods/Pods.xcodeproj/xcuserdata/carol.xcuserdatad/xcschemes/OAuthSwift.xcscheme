@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "98E7E4D2AA18812FD0E7F3798EEBD54D"
-               BlueprintName = "Pods-FTPtester"
+               BlueprintIdentifier = "EF83FCC10E7453ACCB801B656501E2F6"
+               BlueprintName = "OAuthSwift"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-FTPtester.framework">
+               BuildableName = "OAuthSwift.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

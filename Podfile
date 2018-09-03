@@ -7,5 +7,6 @@ target 'FTPtester' do
   # Pods for FTPtester
 
 pod 'FilesProvider'
+pod 'OAuthSwift', '~> 1.2.0'
 
 end

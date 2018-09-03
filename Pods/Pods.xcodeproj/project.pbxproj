@@ -7,58 +7,92 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		023567C51BEAA7954471DBE5AC56FA5F /* SMB2IOCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BBFDBFEB32B05ABBC65665B94B599 /* SMB2IOCtl.swift */; };
-		034A26DC7AC14E98D1AAD878B0FB11A8 /* LocalFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64AC38CA8FBB87FF67AC0C0F1CE0557 /* LocalFileProvider.swift */; };
-		0BAB3FC7ACDB14ED97BB2F17142F990B /* SMB2FileOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956D352434EBFD6D13C63BB24DD84D1E /* SMB2FileOperation.swift */; };
-		0C358706072D5032953338CEBE955461 /* SMB2Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1DFFEA9D1748ED395B083A7FA7990 /* SMB2Types.swift */; };
+		023567C51BEAA7954471DBE5AC56FA5F /* SMB2IOCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7CDD4B2ACD8EA5DA1F8D86EB8E0633 /* SMB2IOCtl.swift */; };
+		034A26DC7AC14E98D1AAD878B0FB11A8 /* LocalFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B45AC93CEA5757356986CE954C1120 /* LocalFileProvider.swift */; };
+		0A1908969828EF0B672312582540E304 /* Collection+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49598E1F9238C210C75422A958401C01 /* Collection+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0BAB3FC7ACDB14ED97BB2F17142F990B /* SMB2FileOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C8F77559EB6FF8840C65A72B0E6F2 /* SMB2FileOperation.swift */; };
+		0C358706072D5032953338CEBE955461 /* SMB2Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F49B7F63E9D18AF5C145D6B783DA215 /* SMB2Types.swift */; };
 		0E7614FAAA9EEAA5EE3C1F91CB96407A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5792D8267CADCE33B2B7F893379EB02A /* AVFoundation.framework */; };
-		13560EB042BBA126D62AE14CB67157C1 /* SMBFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA712E11BB995C3FD4CED69B23DC2800 /* SMBFileProvider.swift */; };
-		1D83C54141E9AA7A903F4C5284150521 /* SMB2QueryTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3658A69B03AED0A1EC90A01F449DF5 /* SMB2QueryTypes.swift */; };
+		0E8E16BFB2519FDDFC29EEACEBC25784 /* OAuth2Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C92C428788C34C03B034A230804A77 /* OAuth2Swift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		13560EB042BBA126D62AE14CB67157C1 /* SMBFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCC44981DA806562BBEB01CA967EBE /* SMBFileProvider.swift */; };
+		15C96676060BF2C17D270C3F029644B1 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CB7F6356D125BCC284A8E7C9347F18 /* SHA1.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1D83C54141E9AA7A903F4C5284150521 /* SMB2QueryTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904D3E567C498804875F75758DA8456 /* SMB2QueryTypes.swift */; };
+		1DED3FDEE669B446980A6E6F842F9549 /* String+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA042910CBD39985C37BEBE4720990E /* String+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		20ADA6DB9E47B002C193F4099E0F4672 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED1D68F026CBF151C4DA1D876318110 /* UIKit.framework */; };
-		223D9F690D8225F1401E0F8358E0857E /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E257593A2918A85216B07A6E6EC93E06 /* Error.swift */; };
-		2284A6F7AE83DC876D725C0FF4849C9B /* CIFSTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F620EFC6C54E7ED172AE69C54EB96C04 /* CIFSTypes.swift */; };
-		25ACE95138C762236FA64A889DBFEBD9 /* DropboxFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E6719B8D99185DF8AE7AD3CFE53FF6 /* DropboxFileProvider.swift */; };
-		2AF34E38A5BA6E803E544003E9A4FD2F /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFAE8D60EE876A3F7521DACAD8D70EE /* Document.swift */; };
-		2EA51626C866559593875E9C8F72EF74 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1605249676FD3C23A9E4A79259B7A47A /* FoundationExtensions.swift */; };
-		3408A44E2650317620CC2A051CEDC6D0 /* SMB2Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF22631B78651679D0F9EB41339474F /* SMB2Query.swift */; };
-		3C28D561FB8DB8E00AC17B4D3AA5925C /* SMBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35656342588D514F8E98D7A9A5E9D60 /* SMBClient.swift */; };
-		3C7B7EA38E933A20DB8D71A3E7C6E628 /* SMB2Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A939DCD82AE47744BC7347A0DF2CD977 /* SMB2Notification.swift */; };
-		4814EEC944A87EF870BF9CB5D89BCDDB /* SMBErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF266DC05B6544B293E40288A6A9E6 /* SMBErrorType.swift */; };
-		4E262B4D1190812D5C1F9459B3FF72F7 /* SMB2FileHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8F58D7C244CACFEB791154DE7DABD /* SMB2FileHandle.swift */; };
-		519B76BA0FFFF19FD9F01D45221A3059 /* HTTPFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22830352A49CDC4E1B67985E30508703 /* HTTPFileProvider.swift */; };
-		5CE3B7327A009EB5AA875FBEE7C38A64 /* CloudFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E52D720E3203F0EDC6FD956AC2D9BDD /* CloudFileProvider.swift */; };
-		683B3C4838A47543C7E6EDFB5B5150D6 /* FileObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E41DA478C28DD64651C39E47134F30 /* FileObject.swift */; };
-		6DC228FF35A5360B654EA155D05D4B4F /* Pods-FTPtester-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC96FC4A45E7B7E3461E7C5EE64F2033 /* Pods-FTPtester-dummy.m */; };
-		72CF33E8A1689157D74EA0B7491CE554 /* FTPFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0590E0B13B23B74C1999E598BBD8FD0 /* FTPFileProvider.swift */; };
+		223D9F690D8225F1401E0F8358E0857E /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932B6F4E25BF7541034573FA50F6DCFD /* Error.swift */; };
+		2284A6F7AE83DC876D725C0FF4849C9B /* CIFSTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50504D0A5B4D974B1213F9068A2E90DE /* CIFSTypes.swift */; };
+		25ACE95138C762236FA64A889DBFEBD9 /* DropboxFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFA7DE8AAF83ADE767D1DF6997EEEA3 /* DropboxFileProvider.swift */; };
+		2AF34E38A5BA6E803E544003E9A4FD2F /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18787220B3A7A96154CF721B355163F4 /* Document.swift */; };
+		2B2EC593EBCF735E657FC4F7D79662A2 /* Pods-FTPtester-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EE9C6BC3796CA2E1DD861121899A0CF /* Pods-FTPtester-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C0B55F2EFCFCE6A903D5F9C7F9E2FC7 /* OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D87E4AA512E651BFE0E233CB3AC5D2 /* OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2EA51626C866559593875E9C8F72EF74 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703AACA690E5FA83E75580E046A970C8 /* FoundationExtensions.swift */; };
+		33288BB59843FAAD4A2330C75D48B80F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120A5219D39F59811AA216CFD8C57B20 /* Utils.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3408A44E2650317620CC2A051CEDC6D0 /* SMB2Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD42100BC3D6B4F117653CFE36DA53F /* SMB2Query.swift */; };
+		3C28D561FB8DB8E00AC17B4D3AA5925C /* SMBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C1811DEA2DD4800E9747ABFA7B16A /* SMBClient.swift */; };
+		3C7B7EA38E933A20DB8D71A3E7C6E628 /* SMB2Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B6796A07ACC2011CE827C414B4F96 /* SMB2Notification.swift */; };
+		4337162E4FCBB327692532D2AADB24AB /* OAuthSwiftResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18C7C79D627C0DAA95B7FD0E91BD89D /* OAuthSwiftResponse.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4814EEC944A87EF870BF9CB5D89BCDDB /* SMBErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953912D6D651D95A62A09AECF99B284 /* SMBErrorType.swift */; };
+		4E262B4D1190812D5C1F9459B3FF72F7 /* SMB2FileHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BADC6B371821D8762FB5071E473A033 /* SMB2FileHandle.swift */; };
+		519B76BA0FFFF19FD9F01D45221A3059 /* HTTPFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC6625AF6A1095ED0A9FC8C8D14C64 /* HTTPFileProvider.swift */; };
+		54143F95ED39F0BF32782D9D7F9AAFD3 /* UIApplication+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12850ADF47D21F76F6C14041EAE0AA8 /* UIApplication+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		54EC154AEE5C8B1E2DE1D39EB0071F30 /* Int+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DA1EABC96DC149F9EE56F957364B0 /* Int+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5CE3B7327A009EB5AA875FBEE7C38A64 /* CloudFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B984E76E5AB96CCE506A4A88C1C2ACC /* CloudFileProvider.swift */; };
+		602C1949653A4615A5DD6AC91B824BBC /* OAuth1Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E02AE739F8B222EF34744CB0BA8563 /* OAuth1Swift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		615B4F07638913112ACF0FDFA305BB36 /* Data+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7732B3AF0013A7ECB74F60287052176 /* Data+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		683B3C4838A47543C7E6EDFB5B5150D6 /* FileObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7731A3641AF5895C866E600D4D98E9E0 /* FileObject.swift */; };
+		6A6B8055DEE857F21D04A3FF7485A44E /* OAuthSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 49D6EFA229467E4FCE86698149D6374B /* OAuthSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F78BFAAAD958F7B294EAD931C21C3C1 /* NotificationCenter+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BC3E28DDAD3EA75691D8266865157D /* NotificationCenter+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		72CF33E8A1689157D74EA0B7491CE554 /* FTPFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69D287E25500B0698447F61B273D930 /* FTPFileProvider.swift */; };
 		7B0E63F5CF00AB2C3EC15803AFA5650F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D13498D5C5237504A45D93681CEB10 /* Foundation.framework */; };
-		814481A15DBF8BB4CBB214CC889C5A22 /* SMB2Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392B8A0CDD0966651DD1F3A735C3688 /* SMB2Tree.swift */; };
-		8F038E5A6C2C1B7D2B68230AEAB3CE2A /* SMB2DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E847279754B93C892008D59CA0D6032E /* SMB2DataTypes.swift */; };
-		92357A0C67DCC1C3A514B5B04A9F5984 /* SMB2SetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD65767F40DF05BE75E3E96343F588D8 /* SMB2SetInfo.swift */; };
-		9E5BE2FAD34CC4A1566F4502475481D7 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B158D70F425EFC665F5440FA521E049 /* Parser.swift */; };
-		9F0D1B45DE6E40D17AC04B4E420C9B93 /* HashMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82B73D27467636876C4DE7CE45E41D /* HashMAC.swift */; };
-		A267DEB8593F1AEB04C74D5B98CE343A /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F2ABBD98D73B42E99B3790731DD3E /* Element.swift */; };
-		A35A2A88BE6BD4518890B7BF03720F43 /* FPSStreamTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B7A158438B7750C7195F212ACE2F29 /* FPSStreamTask.swift */; };
+		7B17CD91C88596B5F2D19D16CB28A4FD /* Dictionary+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731704EC44A7C9073665FBA8EB3627F4 /* Dictionary+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		814481A15DBF8BB4CBB214CC889C5A22 /* SMB2Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC0BC86809BA6F881DF9E431791D0F /* SMB2Tree.swift */; };
+		8F038E5A6C2C1B7D2B68230AEAB3CE2A /* SMB2DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFC91BABBC07E1B18E370DBA5CCE8 /* SMB2DataTypes.swift */; };
+		9233126AB5F69C247A408E26A9B7942C /* Objc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4A0A0D7D1F938A05ED537F13CACE3B /* Objc.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		92357A0C67DCC1C3A514B5B04A9F5984 /* SMB2SetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E5B8B0D0FD27B08D4427A23DB931A5 /* SMB2SetInfo.swift */; };
+		95A48A974C9115D1C848C6FAB5CE5FB8 /* OAuthSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FD9FBF3FCBC292A651D658BAEC2D8B /* OAuthSwift-dummy.m */; };
+		9842D46A74A89E0ED7809E92EC434290 /* OAuthSwiftURLHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA37B5E85C876BE1C459F21915EEDC /* OAuthSwiftURLHandlerType.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9D2D4F83EB0072F2F9976666F90412D0 /* NSError+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D94787BC890F73CD5169AF5B75642E /* NSError+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9E5BE2FAD34CC4A1566F4502475481D7 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7634CDF12AE9D3063241356ECD1917 /* Parser.swift */; };
+		9F0D1B45DE6E40D17AC04B4E420C9B93 /* HashMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490917A667B4506F09997F6D431B3389 /* HashMAC.swift */; };
+		A267DEB8593F1AEB04C74D5B98CE343A /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2A668A52DBA56BA9B32332DA59972 /* Element.swift */; };
+		A35A2A88BE6BD4518890B7BF03720F43 /* FPSStreamTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9F0D4B73B394731B6E7409CCBAA5B /* FPSStreamTask.swift */; };
 		A46D5BFC3B733E33B4FF93EFBF861597 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E43FA1196CA3824F962673B194F77109 /* CoreGraphics.framework */; };
-		A6A16D44A17AFE55F34FF022BF4E0A2C /* ExtendedLocalFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910DAC712EB4AFB3C75BF48A0EA5BA0 /* ExtendedLocalFileProvider.swift */; };
-		AA08C6B061E7AADF4E11B973C3FD0380 /* FilesProvider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7D55B8643076BAE6BDBA4B7BE88196 /* FilesProvider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B265AF71B2C7F175B4F6F63DF00070AB /* FileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3F2E4CC9EB0FCB5FB3138ED3C69A1 /* FileProvider.swift */; };
-		B5624F2069F4D115350EA56F4D97CBCB /* LocalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8C8C4DCD3BC0F53D390D4DB3F1E46B /* LocalHelper.swift */; };
-		B618DC5C5A33C6A3244EC313B97D0679 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60F3240E1AB36A747845F977A6D9118 /* Options.swift */; };
+		A6A16D44A17AFE55F34FF022BF4E0A2C /* ExtendedLocalFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559A40F4A373DB4AAB4117BBB9197736 /* ExtendedLocalFileProvider.swift */; };
+		A7A4A80FE4D52D1492141FB82CED7679 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE006EFEC4738A13C26F426A8486CF1 /* HMAC.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AA08C6B061E7AADF4E11B973C3FD0380 /* FilesProvider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA71AA11F875AB2E8991EF29492F5E12 /* FilesProvider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B265AF71B2C7F175B4F6F63DF00070AB /* FileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE01B6B69852072112B451F1F5CE5A1 /* FileProvider.swift */; };
+		B5624F2069F4D115350EA56F4D97CBCB /* LocalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF529A4AE329E3E89F35E8CF768C426B /* LocalHelper.swift */; };
+		B618DC5C5A33C6A3244EC313B97D0679 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B9EBB9DFCAB70BC07BB9AF68F7C547 /* Options.swift */; };
+		B79BE1F4BADB104866BB7829F473E02F /* URL+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07270815107DD04EAA15ABAFBA3C9FDB /* URL+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BB2D9A45A72512B5660A874B6412E392 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BE3B5A11F47ED5CEB407ED8694B4FA /* ImageIO.framework */; };
-		BE453311812C6FB54A114B63E90175F3 /* FilesProvider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5059CFB9EDDD2D5F8971F21EE2EB5AE /* FilesProvider-dummy.m */; };
-		BEA5C8F10FBF7C0DA54FBCCB64972B39 /* WebDAVFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FE4E25431F554099B8957755867A87 /* WebDAVFileProvider.swift */; };
-		C33229581223345EBC2ECD7D5FAB09B7 /* SMB2Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E895B615B11CCEA92A21B6EED48194 /* SMB2Session.swift */; };
-		CA0499DFF3177AF38B9CFBC3D8165793 /* Pods-FTPtester-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EE9C6BC3796CA2E1DD861121899A0CF /* Pods-FTPtester-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CFBD049FC3D0F63FF1CCCCC820674D1D /* DropboxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2C95FFE714213981EA41A1129E0A5 /* DropboxHelper.swift */; };
-		DA3FD0B9B0F9C312EC523C10FBE571C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D13498D5C5237504A45D93681CEB10 /* Foundation.framework */; };
-		DB8682CBEDA9041DD3ED36CE57C098DB /* RemoteSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4F224D37AFDD241E0E1C6DC5ABC859 /* RemoteSession.swift */; };
-		E3B61EFD322144D378635D3B38130A01 /* OneDriveHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FAEFFE6D29526FE3D8A47175801F6C /* OneDriveHelper.swift */; };
-		F1FFE95A9AC94B6973FAAB242105524E /* OneDriveFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EBEA45A9BD1CDB1678B72C154B994D /* OneDriveFileProvider.swift */; };
-		FE5D7A8A15C748E445F62CAE7458F7C7 /* FTPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EB75BC447D6698EB7F102CF7A1841 /* FTPHelper.swift */; };
+		BE453311812C6FB54A114B63E90175F3 /* FilesProvider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12879043B305172F0A24E5AC4443C161 /* FilesProvider-dummy.m */; };
+		BEA5C8F10FBF7C0DA54FBCCB64972B39 /* WebDAVFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC8413ED92366DE97A3727C85C20AA /* WebDAVFileProvider.swift */; };
+		BEEB7138D830B9414158F024CF836B2E /* OAuthSwiftClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11271D0FE87E09DB7F25E391A66C83 /* OAuthSwiftClient.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C33229581223345EBC2ECD7D5FAB09B7 /* SMB2Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D769AC6065CA6E45201F2F980A27F5D /* SMB2Session.swift */; };
+		C417DA5E48DE74B3E2C6F38BD6E8AA82 /* OAuthSwiftHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D38106218017F35EBED6BB46387392 /* OAuthSwiftHTTPRequest.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C599CE94C59B4740EC39FD0115B3EC6E /* OAuthSwiftMultipartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460843A3C2DD2025E2EA7D67F2AB5D50 /* OAuthSwiftMultipartData.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CA69265D91583F5EEE1925B6D303E8B0 /* OAuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D268D29D78FCADE9BFD0D15911717 /* OAuthWebViewController.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CFBD049FC3D0F63FF1CCCCC820674D1D /* DropboxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5C669C1F36C128BFC16EF606D338AE /* DropboxHelper.swift */; };
+		D420BC0F276AC46E9E08B2CABD4427F6 /* Pods-FTPtester-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC96FC4A45E7B7E3461E7C5EE64F2033 /* Pods-FTPtester-dummy.m */; };
+		D640EF5F80D46D58145341D4707E106E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D13498D5C5237504A45D93681CEB10 /* Foundation.framework */; };
+		DB8682CBEDA9041DD3ED36CE57C098DB /* RemoteSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA6E3DCA66A9FC36295E06E2F46DDC /* RemoteSession.swift */; };
+		E3B61EFD322144D378635D3B38130A01 /* OneDriveHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E3035FF920B6E454C2FB5904C72104 /* OneDriveHelper.swift */; };
+		E534E5B569998215346B127DCDF9CF93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D13498D5C5237504A45D93681CEB10 /* Foundation.framework */; };
+		ED9967754FA36BC9BE4F248E94F0134B /* OAuthSwiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE03177005C8BFCA42519FB90D73EB0 /* OAuthSwiftError.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F0E90BDEF941B43FBEB3469F9BD2056F /* OAuthSwiftCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBF7C461627EE0828B93AE85AD8986 /* OAuthSwiftCredential.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F1FFE95A9AC94B6973FAAB242105524E /* OneDriveFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0C9356994A0DC235862B331BD94203 /* OneDriveFileProvider.swift */; };
+		FE5D7A8A15C748E445F62CAE7458F7C7 /* FTPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9698AA58DD0F4321FF9C82BE3C2178 /* FTPHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6604CCE71312B60EBDBB8201CD73C0FF /* PBXContainerItemProxy */ = {
+		67E93E0CDDE4AAC3A258FE44428FF3C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF83FCC10E7453ACCB801B656501E2F6;
+			remoteInfo = OAuthSwift;
+		};
+		E367A57BC9B884152199A21EA06720A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -68,76 +102,107 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1605249676FD3C23A9E4A79259B7A47A /* FoundationExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationExtensions.swift; path = Sources/Extensions/FoundationExtensions.swift; sourceTree = "<group>"; };
-		176BBFDBFEB32B05ABBC65665B94B599 /* SMB2IOCtl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2IOCtl.swift; path = Sources/SMBTypes/SMB2IOCtl.swift; sourceTree = "<group>"; };
+		00260E94F2B5834663462F15ECB5586E /* OAuthSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OAuthSwift.xcconfig; sourceTree = "<group>"; };
+		00CB7F6356D125BCC284A8E7C9347F18 /* SHA1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA1.swift; path = Sources/SHA1.swift; sourceTree = "<group>"; };
+		07270815107DD04EAA15ABAFBA3C9FDB /* URL+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+OAuthSwift.swift"; path = "Sources/URL+OAuthSwift.swift"; sourceTree = "<group>"; };
+		0DE006EFEC4738A13C26F426A8486CF1 /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Sources/HMAC.swift; sourceTree = "<group>"; };
+		120A5219D39F59811AA216CFD8C57B20 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/Utils.swift; sourceTree = "<group>"; };
+		12879043B305172F0A24E5AC4443C161 /* FilesProvider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FilesProvider-dummy.m"; sourceTree = "<group>"; };
+		13DA6E3DCA66A9FC36295E06E2F46DDC /* RemoteSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RemoteSession.swift; path = Sources/RemoteSession.swift; sourceTree = "<group>"; };
+		18787220B3A7A96154CF721B355163F4 /* Document.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Document.swift; path = Sources/AEXML/Document.swift; sourceTree = "<group>"; };
+		1C4A0A0D7D1F938A05ED537F13CACE3B /* Objc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Objc.swift; path = Sources/Objc.swift; sourceTree = "<group>"; };
+		1D769AC6065CA6E45201F2F980A27F5D /* SMB2Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2Session.swift; path = Sources/SMBTypes/SMB2Session.swift; sourceTree = "<group>"; };
 		1ED1D68F026CBF151C4DA1D876318110 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		22830352A49CDC4E1B67985E30508703 /* HTTPFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPFileProvider.swift; path = Sources/HTTPFileProvider.swift; sourceTree = "<group>"; };
-		23E41DA478C28DD64651C39E47134F30 /* FileObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileObject.swift; path = Sources/FileObject.swift; sourceTree = "<group>"; };
-		25FE4E25431F554099B8957755867A87 /* WebDAVFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebDAVFileProvider.swift; path = Sources/WebDAVFileProvider.swift; sourceTree = "<group>"; };
-		27FAEFFE6D29526FE3D8A47175801F6C /* OneDriveHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OneDriveHelper.swift; path = Sources/OneDriveHelper.swift; sourceTree = "<group>"; };
-		2B0329D48DE30279C0F6FD2E6E252246 /* FilesProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FilesProvider.framework; path = FilesProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B3658A69B03AED0A1EC90A01F449DF5 /* SMB2QueryTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2QueryTypes.swift; path = Sources/SMBTypes/SMB2QueryTypes.swift; sourceTree = "<group>"; };
+		26B9EBB9DFCAB70BC07BB9AF68F7C547 /* Options.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Options.swift; path = Sources/AEXML/Options.swift; sourceTree = "<group>"; };
+		2B11271D0FE87E09DB7F25E391A66C83 /* OAuthSwiftClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftClient.swift; path = Sources/OAuthSwiftClient.swift; sourceTree = "<group>"; };
+		2F49B7F63E9D18AF5C145D6B783DA215 /* SMB2Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2Types.swift; path = Sources/SMBTypes/SMB2Types.swift; sourceTree = "<group>"; };
+		2F7CDD4B2ACD8EA5DA1F8D86EB8E0633 /* SMB2IOCtl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2IOCtl.swift; path = Sources/SMBTypes/SMB2IOCtl.swift; sourceTree = "<group>"; };
 		309C75EC3505D8042BFEAFD05C37812B /* Pods-FTPtester.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FTPtester.modulemap"; sourceTree = "<group>"; };
-		38E895B615B11CCEA92A21B6EED48194 /* SMB2Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2Session.swift; path = Sources/SMBTypes/SMB2Session.swift; sourceTree = "<group>"; };
-		39EBEA45A9BD1CDB1678B72C154B994D /* OneDriveFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OneDriveFileProvider.swift; path = Sources/OneDriveFileProvider.swift; sourceTree = "<group>"; };
-		3E52D720E3203F0EDC6FD956AC2D9BDD /* CloudFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CloudFileProvider.swift; path = Sources/CloudFileProvider.swift; sourceTree = "<group>"; };
-		3ED8D79E6F01E7B97D0D8BCCDFAEFC6D /* FilesProvider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FilesProvider.xcconfig; sourceTree = "<group>"; };
-		4B158D70F425EFC665F5440FA521E049 /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Sources/AEXML/Parser.swift; sourceTree = "<group>"; };
+		34D2A668A52DBA56BA9B32332DA59972 /* Element.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Element.swift; path = Sources/AEXML/Element.swift; sourceTree = "<group>"; };
+		3D7634CDF12AE9D3063241356ECD1917 /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Sources/AEXML/Parser.swift; sourceTree = "<group>"; };
+		427D268D29D78FCADE9BFD0D15911717 /* OAuthWebViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthWebViewController.swift; path = Sources/OAuthWebViewController.swift; sourceTree = "<group>"; };
+		42CC6625AF6A1095ED0A9FC8C8D14C64 /* HTTPFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPFileProvider.swift; path = Sources/HTTPFileProvider.swift; sourceTree = "<group>"; };
+		460843A3C2DD2025E2EA7D67F2AB5D50 /* OAuthSwiftMultipartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftMultipartData.swift; path = Sources/OAuthSwiftMultipartData.swift; sourceTree = "<group>"; };
+		47F9F0D4B73B394731B6E7409CCBAA5B /* FPSStreamTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FPSStreamTask.swift; path = Sources/FPSStreamTask.swift; sourceTree = "<group>"; };
+		481DA1EABC96DC149F9EE56F957364B0 /* Int+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+OAuthSwift.swift"; path = "Sources/Int+OAuthSwift.swift"; sourceTree = "<group>"; };
+		490917A667B4506F09997F6D431B3389 /* HashMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HashMAC.swift; path = Sources/Extensions/HashMAC.swift; sourceTree = "<group>"; };
+		49598E1F9238C210C75422A958401C01 /* Collection+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+OAuthSwift.swift"; path = "Sources/Collection+OAuthSwift.swift"; sourceTree = "<group>"; };
+		49D6EFA229467E4FCE86698149D6374B /* OAuthSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthSwift-umbrella.h"; sourceTree = "<group>"; };
+		4EA042910CBD39985C37BEBE4720990E /* String+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+OAuthSwift.swift"; path = "Sources/String+OAuthSwift.swift"; sourceTree = "<group>"; };
+		50504D0A5B4D974B1213F9068A2E90DE /* CIFSTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CIFSTypes.swift; path = Sources/SMBTypes/CIFSTypes.swift; sourceTree = "<group>"; };
+		52D94787BC890F73CD5169AF5B75642E /* NSError+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSError+OAuthSwift.swift"; path = "Sources/NSError+OAuthSwift.swift"; sourceTree = "<group>"; };
+		5554CCEB6FA3AA0E2811FD0177A91A2D /* FilesProvider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FilesProvider.xcconfig; sourceTree = "<group>"; };
+		559A40F4A373DB4AAB4117BBB9197736 /* ExtendedLocalFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtendedLocalFileProvider.swift; path = Sources/ExtendedLocalFileProvider.swift; sourceTree = "<group>"; };
 		5792D8267CADCE33B2B7F893379EB02A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		5D8C8C4DCD3BC0F53D390D4DB3F1E46B /* LocalHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalHelper.swift; path = Sources/LocalHelper.swift; sourceTree = "<group>"; };
-		5DA8F58D7C244CACFEB791154DE7DABD /* SMB2FileHandle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2FileHandle.swift; path = Sources/SMBTypes/SMB2FileHandle.swift; sourceTree = "<group>"; };
+		5CFC254EFB8AE9DF642B889BBDBC9088 /* FilesProvider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FilesProvider.modulemap; sourceTree = "<group>"; };
+		5DFFB31D1D0B0B860CFDFD5408C9CDAC /* FilesProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FilesProvider.framework; path = FilesProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE9C6BC3796CA2E1DD861121899A0CF /* Pods-FTPtester-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FTPtester-umbrella.h"; sourceTree = "<group>"; };
-		60C90969D35AB65F80F0FB87F87FB35C /* Pods_FTPtester.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FTPtester.framework; path = "Pods-FTPtester.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		682EB75BC447D6698EB7F102CF7A1841 /* FTPHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTPHelper.swift; path = Sources/FTPHelper.swift; sourceTree = "<group>"; };
-		7CFAE8D60EE876A3F7521DACAD8D70EE /* Document.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Document.swift; path = Sources/AEXML/Document.swift; sourceTree = "<group>"; };
+		60211CE5456A1B6C1D0768A80FD25AA2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FFA7DE8AAF83ADE767D1DF6997EEEA3 /* DropboxFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxFileProvider.swift; path = Sources/DropboxFileProvider.swift; sourceTree = "<group>"; };
+		703AACA690E5FA83E75580E046A970C8 /* FoundationExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationExtensions.swift; path = Sources/Extensions/FoundationExtensions.swift; sourceTree = "<group>"; };
+		70EFFC91BABBC07E1B18E370DBA5CCE8 /* SMB2DataTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2DataTypes.swift; path = Sources/SMBTypes/SMB2DataTypes.swift; sourceTree = "<group>"; };
+		731704EC44A7C9073665FBA8EB3627F4 /* Dictionary+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+OAuthSwift.swift"; path = "Sources/Dictionary+OAuthSwift.swift"; sourceTree = "<group>"; };
+		746B6796A07ACC2011CE827C414B4F96 /* SMB2Notification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2Notification.swift; path = Sources/SMBTypes/SMB2Notification.swift; sourceTree = "<group>"; };
+		74E5B8B0D0FD27B08D4427A23DB931A5 /* SMB2SetInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2SetInfo.swift; path = Sources/SMBTypes/SMB2SetInfo.swift; sourceTree = "<group>"; };
+		7731A3641AF5895C866E600D4D98E9E0 /* FileObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileObject.swift; path = Sources/FileObject.swift; sourceTree = "<group>"; };
+		773C1811DEA2DD4800E9747ABFA7B16A /* SMBClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMBClient.swift; path = Sources/SMBClient.swift; sourceTree = "<group>"; };
+		7BADC6B371821D8762FB5071E473A033 /* SMB2FileHandle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2FileHandle.swift; path = Sources/SMBTypes/SMB2FileHandle.swift; sourceTree = "<group>"; };
 		8317E612915BD51B48E03CFB5AF00A17 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848C8F77559EB6FF8840C65A72B0E6F2 /* SMB2FileOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2FileOperation.swift; path = Sources/SMBTypes/SMB2FileOperation.swift; sourceTree = "<group>"; };
+		85C92C428788C34C03B034A230804A77 /* OAuth2Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Swift.swift; path = Sources/OAuth2Swift.swift; sourceTree = "<group>"; };
+		85CCC44981DA806562BBEB01CA967EBE /* SMBFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMBFileProvider.swift; path = Sources/SMBFileProvider.swift; sourceTree = "<group>"; };
 		89BE3B5A11F47ED5CEB407ED8694B4FA /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		8A0FF69064CB7A1BDF79B6ECC4F27FBB /* Pods-FTPtester-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FTPtester-resources.sh"; sourceTree = "<group>"; };
-		8CCF266DC05B6544B293E40288A6A9E6 /* SMBErrorType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMBErrorType.swift; path = Sources/SMBTypes/SMBErrorType.swift; sourceTree = "<group>"; };
+		8CDC8413ED92366DE97A3727C85C20AA /* WebDAVFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebDAVFileProvider.swift; path = Sources/WebDAVFileProvider.swift; sourceTree = "<group>"; };
+		932B6F4E25BF7541034573FA50F6DCFD /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/AEXML/Error.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		956D352434EBFD6D13C63BB24DD84D1E /* SMB2FileOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2FileOperation.swift; path = Sources/SMBTypes/SMB2FileOperation.swift; sourceTree = "<group>"; };
+		93D38106218017F35EBED6BB46387392 /* OAuthSwiftHTTPRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftHTTPRequest.swift; path = Sources/OAuthSwiftHTTPRequest.swift; sourceTree = "<group>"; };
+		94D87E4AA512E651BFE0E233CB3AC5D2 /* OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwift.swift; path = Sources/OAuthSwift.swift; sourceTree = "<group>"; };
+		97B45AC93CEA5757356986CE954C1120 /* LocalFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalFileProvider.swift; path = Sources/LocalFileProvider.swift; sourceTree = "<group>"; };
 		98503199E6C4BE643F9368FAC5271EF8 /* Pods-FTPtester-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FTPtester-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9AC48A02206F96785F347C7EA2541893 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B543E138AF2B5ABC624F7C85628F8DB /* FilesProvider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FilesProvider-prefix.pch"; sourceTree = "<group>"; };
-		A3A3F2E4CC9EB0FCB5FB3138ED3C69A1 /* FileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileProvider.swift; path = Sources/FileProvider.swift; sourceTree = "<group>"; };
-		A64AC38CA8FBB87FF67AC0C0F1CE0557 /* LocalFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalFileProvider.swift; path = Sources/LocalFileProvider.swift; sourceTree = "<group>"; };
+		9B984E76E5AB96CCE506A4A88C1C2ACC /* CloudFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CloudFileProvider.swift; path = Sources/CloudFileProvider.swift; sourceTree = "<group>"; };
+		9D5C669C1F36C128BFC16EF606D338AE /* DropboxHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxHelper.swift; path = Sources/DropboxHelper.swift; sourceTree = "<group>"; };
+		A12850ADF47D21F76F6C14041EAE0AA8 /* UIApplication+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+OAuthSwift.swift"; path = "Sources/UIApplication+OAuthSwift.swift"; sourceTree = "<group>"; };
+		A69D287E25500B0698447F61B273D930 /* FTPFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTPFileProvider.swift; path = Sources/FTPFileProvider.swift; sourceTree = "<group>"; };
+		A7732B3AF0013A7ECB74F60287052176 /* Data+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+OAuthSwift.swift"; path = "Sources/Data+OAuthSwift.swift"; sourceTree = "<group>"; };
 		A8E54DBD28D63A34AFCF1865419A3A3A /* Pods-FTPtester-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FTPtester-acknowledgements.plist"; sourceTree = "<group>"; };
-		A939DCD82AE47744BC7347A0DF2CD977 /* SMB2Notification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2Notification.swift; path = Sources/SMBTypes/SMB2Notification.swift; sourceTree = "<group>"; };
-		AB4F224D37AFDD241E0E1C6DC5ABC859 /* RemoteSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RemoteSession.swift; path = Sources/RemoteSession.swift; sourceTree = "<group>"; };
-		AF3F2ABBD98D73B42E99B3790731DD3E /* Element.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Element.swift; path = Sources/AEXML/Element.swift; sourceTree = "<group>"; };
-		B392B8A0CDD0966651DD1F3A735C3688 /* SMB2Tree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2Tree.swift; path = Sources/SMBTypes/SMB2Tree.swift; sourceTree = "<group>"; };
-		BCA09CD80B0ED0935789775F59B029EA /* FilesProvider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FilesProvider.modulemap; sourceTree = "<group>"; };
-		C0590E0B13B23B74C1999E598BBD8FD0 /* FTPFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTPFileProvider.swift; path = Sources/FTPFileProvider.swift; sourceTree = "<group>"; };
+		A904D3E567C498804875F75758DA8456 /* SMB2QueryTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2QueryTypes.swift; path = Sources/SMBTypes/SMB2QueryTypes.swift; sourceTree = "<group>"; };
+		AAE5DC1A7895F08F8D9F6781EF55D44A /* OAuthSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OAuthSwift.framework; path = OAuthSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE01B6B69852072112B451F1F5CE5A1 /* FileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileProvider.swift; path = Sources/FileProvider.swift; sourceTree = "<group>"; };
+		ABE03177005C8BFCA42519FB90D73EB0 /* OAuthSwiftError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftError.swift; path = Sources/OAuthSwiftError.swift; sourceTree = "<group>"; };
+		B18C7C79D627C0DAA95B7FD0E91BD89D /* OAuthSwiftResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftResponse.swift; path = Sources/OAuthSwiftResponse.swift; sourceTree = "<group>"; };
+		B71E5729E72DAAA8C53F1F92A21B8352 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2FD9FBF3FCBC292A651D658BAEC2D8B /* OAuthSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OAuthSwift-dummy.m"; sourceTree = "<group>"; };
+		C3BC3E28DDAD3EA75691D8266865157D /* NotificationCenter+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NotificationCenter+OAuthSwift.swift"; path = "Sources/NotificationCenter+OAuthSwift.swift"; sourceTree = "<group>"; };
+		C578F9481935C9DAAE74106A8AA07372 /* Pods_FTPtester.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FTPtester.framework; path = "Pods-FTPtester.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D13498D5C5237504A45D93681CEB10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CC96FC4A45E7B7E3461E7C5EE64F2033 /* Pods-FTPtester-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FTPtester-dummy.m"; sourceTree = "<group>"; };
-		CD65767F40DF05BE75E3E96343F588D8 /* SMB2SetInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2SetInfo.swift; path = Sources/SMBTypes/SMB2SetInfo.swift; sourceTree = "<group>"; };
-		CEF22631B78651679D0F9EB41339474F /* SMB2Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2Query.swift; path = Sources/SMBTypes/SMB2Query.swift; sourceTree = "<group>"; };
-		D35656342588D514F8E98D7A9A5E9D60 /* SMBClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMBClient.swift; path = Sources/SMBClient.swift; sourceTree = "<group>"; };
-		D5059CFB9EDDD2D5F8971F21EE2EB5AE /* FilesProvider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FilesProvider-dummy.m"; sourceTree = "<group>"; };
-		DA712E11BB995C3FD4CED69B23DC2800 /* SMBFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMBFileProvider.swift; path = Sources/SMBFileProvider.swift; sourceTree = "<group>"; };
-		DE82B73D27467636876C4DE7CE45E41D /* HashMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HashMAC.swift; path = Sources/Extensions/HashMAC.swift; sourceTree = "<group>"; };
-		E257593A2918A85216B07A6E6EC93E06 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/AEXML/Error.swift; sourceTree = "<group>"; };
+		CD9698AA58DD0F4321FF9C82BE3C2178 /* FTPHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTPHelper.swift; path = Sources/FTPHelper.swift; sourceTree = "<group>"; };
+		CEEC0BC86809BA6F881DF9E431791D0F /* SMB2Tree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2Tree.swift; path = Sources/SMBTypes/SMB2Tree.swift; sourceTree = "<group>"; };
+		CFAA37B5E85C876BE1C459F21915EEDC /* OAuthSwiftURLHandlerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftURLHandlerType.swift; path = Sources/OAuthSwiftURLHandlerType.swift; sourceTree = "<group>"; };
+		D3E3035FF920B6E454C2FB5904C72104 /* OneDriveHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OneDriveHelper.swift; path = Sources/OneDriveHelper.swift; sourceTree = "<group>"; };
+		D6DBF7C461627EE0828B93AE85AD8986 /* OAuthSwiftCredential.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftCredential.swift; path = Sources/OAuthSwiftCredential.swift; sourceTree = "<group>"; };
+		D953912D6D651D95A62A09AECF99B284 /* SMBErrorType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMBErrorType.swift; path = Sources/SMBTypes/SMBErrorType.swift; sourceTree = "<group>"; };
+		DF529A4AE329E3E89F35E8CF768C426B /* LocalHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalHelper.swift; path = Sources/LocalHelper.swift; sourceTree = "<group>"; };
+		E218B1318CFC9268825180AE53EB447F /* OAuthSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OAuthSwift.modulemap; sourceTree = "<group>"; };
 		E43FA1196CA3824F962673B194F77109 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		E5E6719B8D99185DF8AE7AD3CFE53FF6 /* DropboxFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxFileProvider.swift; path = Sources/DropboxFileProvider.swift; sourceTree = "<group>"; };
-		E847279754B93C892008D59CA0D6032E /* SMB2DataTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2DataTypes.swift; path = Sources/SMBTypes/SMB2DataTypes.swift; sourceTree = "<group>"; };
-		E910DAC712EB4AFB3C75BF48A0EA5BA0 /* ExtendedLocalFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtendedLocalFileProvider.swift; path = Sources/ExtendedLocalFileProvider.swift; sourceTree = "<group>"; };
+		E517E51BB63DDE15208B043608483761 /* FilesProvider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FilesProvider-prefix.pch"; sourceTree = "<group>"; };
+		E8E02AE739F8B222EF34744CB0BA8563 /* OAuth1Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth1Swift.swift; path = Sources/OAuth1Swift.swift; sourceTree = "<group>"; };
+		EA71AA11F875AB2E8991EF29492F5E12 /* FilesProvider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FilesProvider-umbrella.h"; sourceTree = "<group>"; };
+		EE0C9356994A0DC235862B331BD94203 /* OneDriveFileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OneDriveFileProvider.swift; path = Sources/OneDriveFileProvider.swift; sourceTree = "<group>"; };
 		EEA88745D583741DEB943CC61B1AD95B /* Pods-FTPtester-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FTPtester-frameworks.sh"; sourceTree = "<group>"; };
-		EF7D55B8643076BAE6BDBA4B7BE88196 /* FilesProvider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FilesProvider-umbrella.h"; sourceTree = "<group>"; };
-		F60F3240E1AB36A747845F977A6D9118 /* Options.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Options.swift; path = Sources/AEXML/Options.swift; sourceTree = "<group>"; };
-		F620EFC6C54E7ED172AE69C54EB96C04 /* CIFSTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CIFSTypes.swift; path = Sources/SMBTypes/CIFSTypes.swift; sourceTree = "<group>"; };
 		F65318A356D7BCF4093F550757DC29EF /* Pods-FTPtester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FTPtester.release.xcconfig"; sourceTree = "<group>"; };
-		F9B7A158438B7750C7195F212ACE2F29 /* FPSStreamTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FPSStreamTask.swift; path = Sources/FPSStreamTask.swift; sourceTree = "<group>"; };
-		FAB2C95FFE714213981EA41A1129E0A5 /* DropboxHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxHelper.swift; path = Sources/DropboxHelper.swift; sourceTree = "<group>"; };
 		FB5E94A9DCC4932C7FFB714470C02BEF /* Pods-FTPtester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FTPtester.debug.xcconfig"; sourceTree = "<group>"; };
-		FFA1DFFEA9D1748ED395B083A7FA7990 /* SMB2Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2Types.swift; path = Sources/SMBTypes/SMB2Types.swift; sourceTree = "<group>"; };
+		FCA0A6EAC45A9EE54972FA6FE4385E67 /* OAuthSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthSwift-prefix.pch"; sourceTree = "<group>"; };
+		FFD42100BC3D6B4F117653CFE36DA53F /* SMB2Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMB2Query.swift; path = Sources/SMBTypes/SMB2Query.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		86491DAAF94149D6A438163DE54C901F /* Frameworks */ = {
+		CEB4E056013A2FC1E3CE9A32A81B902B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA3FD0B9B0F9C312EC523C10FBE571C2 /* Foundation.framework in Frameworks */,
+				E534E5B569998215346B127DCDF9CF93 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,15 +218,93 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E411FE86C35FE60BCDED88381E3A1DE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D640EF5F80D46D58145341D4707E106E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A069EF0CB2EC2161D89BE7B807EC81A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CFC254EFB8AE9DF642B889BBDBC9088 /* FilesProvider.modulemap */,
+				5554CCEB6FA3AA0E2811FD0177A91A2D /* FilesProvider.xcconfig */,
+				12879043B305172F0A24E5AC4443C161 /* FilesProvider-dummy.m */,
+				E517E51BB63DDE15208B043608483761 /* FilesProvider-prefix.pch */,
+				EA71AA11F875AB2E8991EF29492F5E12 /* FilesProvider-umbrella.h */,
+				B71E5729E72DAAA8C53F1F92A21B8352 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FilesProvider";
+			sourceTree = "<group>";
+		};
 		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				3BCFF35439B179C1660AB33270914E8D /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24E361B2E24198F35A80E79C7CF636B1 /* FilesProvider */ = {
+			isa = PBXGroup;
+			children = (
+				50504D0A5B4D974B1213F9068A2E90DE /* CIFSTypes.swift */,
+				9B984E76E5AB96CCE506A4A88C1C2ACC /* CloudFileProvider.swift */,
+				18787220B3A7A96154CF721B355163F4 /* Document.swift */,
+				6FFA7DE8AAF83ADE767D1DF6997EEEA3 /* DropboxFileProvider.swift */,
+				9D5C669C1F36C128BFC16EF606D338AE /* DropboxHelper.swift */,
+				34D2A668A52DBA56BA9B32332DA59972 /* Element.swift */,
+				932B6F4E25BF7541034573FA50F6DCFD /* Error.swift */,
+				559A40F4A373DB4AAB4117BBB9197736 /* ExtendedLocalFileProvider.swift */,
+				7731A3641AF5895C866E600D4D98E9E0 /* FileObject.swift */,
+				ABE01B6B69852072112B451F1F5CE5A1 /* FileProvider.swift */,
+				703AACA690E5FA83E75580E046A970C8 /* FoundationExtensions.swift */,
+				47F9F0D4B73B394731B6E7409CCBAA5B /* FPSStreamTask.swift */,
+				A69D287E25500B0698447F61B273D930 /* FTPFileProvider.swift */,
+				CD9698AA58DD0F4321FF9C82BE3C2178 /* FTPHelper.swift */,
+				490917A667B4506F09997F6D431B3389 /* HashMAC.swift */,
+				42CC6625AF6A1095ED0A9FC8C8D14C64 /* HTTPFileProvider.swift */,
+				97B45AC93CEA5757356986CE954C1120 /* LocalFileProvider.swift */,
+				DF529A4AE329E3E89F35E8CF768C426B /* LocalHelper.swift */,
+				EE0C9356994A0DC235862B331BD94203 /* OneDriveFileProvider.swift */,
+				D3E3035FF920B6E454C2FB5904C72104 /* OneDriveHelper.swift */,
+				26B9EBB9DFCAB70BC07BB9AF68F7C547 /* Options.swift */,
+				3D7634CDF12AE9D3063241356ECD1917 /* Parser.swift */,
+				13DA6E3DCA66A9FC36295E06E2F46DDC /* RemoteSession.swift */,
+				70EFFC91BABBC07E1B18E370DBA5CCE8 /* SMB2DataTypes.swift */,
+				7BADC6B371821D8762FB5071E473A033 /* SMB2FileHandle.swift */,
+				848C8F77559EB6FF8840C65A72B0E6F2 /* SMB2FileOperation.swift */,
+				2F7CDD4B2ACD8EA5DA1F8D86EB8E0633 /* SMB2IOCtl.swift */,
+				746B6796A07ACC2011CE827C414B4F96 /* SMB2Notification.swift */,
+				FFD42100BC3D6B4F117653CFE36DA53F /* SMB2Query.swift */,
+				A904D3E567C498804875F75758DA8456 /* SMB2QueryTypes.swift */,
+				1D769AC6065CA6E45201F2F980A27F5D /* SMB2Session.swift */,
+				74E5B8B0D0FD27B08D4427A23DB931A5 /* SMB2SetInfo.swift */,
+				CEEC0BC86809BA6F881DF9E431791D0F /* SMB2Tree.swift */,
+				2F49B7F63E9D18AF5C145D6B783DA215 /* SMB2Types.swift */,
+				773C1811DEA2DD4800E9747ABFA7B16A /* SMBClient.swift */,
+				D953912D6D651D95A62A09AECF99B284 /* SMBErrorType.swift */,
+				85CCC44981DA806562BBEB01CA967EBE /* SMBFileProvider.swift */,
+				8CDC8413ED92366DE97A3727C85C20AA /* WebDAVFileProvider.swift */,
+				1A069EF0CB2EC2161D89BE7B807EC81A /* Support Files */,
+			);
+			name = FilesProvider;
+			path = FilesProvider;
+			sourceTree = "<group>";
+		};
+		2DCE6EC5B9507D4B62D2F3924037B76F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24E361B2E24198F35A80E79C7CF636B1 /* FilesProvider */,
+				B06988A6A9A5D638F9A261B50C879B81 /* OAuthSwift */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		3BCFF35439B179C1660AB33270914E8D /* iOS */ = {
@@ -174,62 +317,6 @@
 				1ED1D68F026CBF151C4DA1D876318110 /* UIKit.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		5365F682D023174CFE6C6A65A52D817F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2B0329D48DE30279C0F6FD2E6E252246 /* FilesProvider.framework */,
-				60C90969D35AB65F80F0FB87F87FB35C /* Pods_FTPtester.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6063E8AEF48E4704E04AEF97E8B738B5 /* FilesProvider */ = {
-			isa = PBXGroup;
-			children = (
-				F620EFC6C54E7ED172AE69C54EB96C04 /* CIFSTypes.swift */,
-				3E52D720E3203F0EDC6FD956AC2D9BDD /* CloudFileProvider.swift */,
-				7CFAE8D60EE876A3F7521DACAD8D70EE /* Document.swift */,
-				E5E6719B8D99185DF8AE7AD3CFE53FF6 /* DropboxFileProvider.swift */,
-				FAB2C95FFE714213981EA41A1129E0A5 /* DropboxHelper.swift */,
-				AF3F2ABBD98D73B42E99B3790731DD3E /* Element.swift */,
-				E257593A2918A85216B07A6E6EC93E06 /* Error.swift */,
-				E910DAC712EB4AFB3C75BF48A0EA5BA0 /* ExtendedLocalFileProvider.swift */,
-				23E41DA478C28DD64651C39E47134F30 /* FileObject.swift */,
-				A3A3F2E4CC9EB0FCB5FB3138ED3C69A1 /* FileProvider.swift */,
-				1605249676FD3C23A9E4A79259B7A47A /* FoundationExtensions.swift */,
-				F9B7A158438B7750C7195F212ACE2F29 /* FPSStreamTask.swift */,
-				C0590E0B13B23B74C1999E598BBD8FD0 /* FTPFileProvider.swift */,
-				682EB75BC447D6698EB7F102CF7A1841 /* FTPHelper.swift */,
-				DE82B73D27467636876C4DE7CE45E41D /* HashMAC.swift */,
-				22830352A49CDC4E1B67985E30508703 /* HTTPFileProvider.swift */,
-				A64AC38CA8FBB87FF67AC0C0F1CE0557 /* LocalFileProvider.swift */,
-				5D8C8C4DCD3BC0F53D390D4DB3F1E46B /* LocalHelper.swift */,
-				39EBEA45A9BD1CDB1678B72C154B994D /* OneDriveFileProvider.swift */,
-				27FAEFFE6D29526FE3D8A47175801F6C /* OneDriveHelper.swift */,
-				F60F3240E1AB36A747845F977A6D9118 /* Options.swift */,
-				4B158D70F425EFC665F5440FA521E049 /* Parser.swift */,
-				AB4F224D37AFDD241E0E1C6DC5ABC859 /* RemoteSession.swift */,
-				E847279754B93C892008D59CA0D6032E /* SMB2DataTypes.swift */,
-				5DA8F58D7C244CACFEB791154DE7DABD /* SMB2FileHandle.swift */,
-				956D352434EBFD6D13C63BB24DD84D1E /* SMB2FileOperation.swift */,
-				176BBFDBFEB32B05ABBC65665B94B599 /* SMB2IOCtl.swift */,
-				A939DCD82AE47744BC7347A0DF2CD977 /* SMB2Notification.swift */,
-				CEF22631B78651679D0F9EB41339474F /* SMB2Query.swift */,
-				2B3658A69B03AED0A1EC90A01F449DF5 /* SMB2QueryTypes.swift */,
-				38E895B615B11CCEA92A21B6EED48194 /* SMB2Session.swift */,
-				CD65767F40DF05BE75E3E96343F588D8 /* SMB2SetInfo.swift */,
-				B392B8A0CDD0966651DD1F3A735C3688 /* SMB2Tree.swift */,
-				FFA1DFFEA9D1748ED395B083A7FA7990 /* SMB2Types.swift */,
-				D35656342588D514F8E98D7A9A5E9D60 /* SMBClient.swift */,
-				8CCF266DC05B6544B293E40288A6A9E6 /* SMBErrorType.swift */,
-				DA712E11BB995C3FD4CED69B23DC2800 /* SMBFileProvider.swift */,
-				25FE4E25431F554099B8957755867A87 /* WebDAVFileProvider.swift */,
-				CB9038EB377BF0AE2BD83B739AEFC32F /* Support Files */,
-			);
-			name = FilesProvider;
-			path = FilesProvider;
 			sourceTree = "<group>";
 		};
 		6C2FB6D0668AC5E14865F8CA84D51D4F /* Pods-FTPtester */ = {
@@ -255,10 +342,20 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
-				E2D4A1B0BA89C1728EBA6B2AD3411E25 /* Pods */,
-				5365F682D023174CFE6C6A65A52D817F /* Products */,
+				2DCE6EC5B9507D4B62D2F3924037B76F /* Pods */,
+				95CAA507F08D194D4D41025118FBDCA9 /* Products */,
 				A380B35C742016EB67AD18DFFAD910A4 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		95CAA507F08D194D4D41025118FBDCA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DFFB31D1D0B0B860CFDFD5408C9CDAC /* FilesProvider.framework */,
+				AAE5DC1A7895F08F8D9F6781EF55D44A /* OAuthSwift.framework */,
+				C578F9481935C9DAAE74106A8AA07372 /* Pods_FTPtester.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		A380B35C742016EB67AD18DFFAD910A4 /* Targets Support Files */ = {
@@ -269,39 +366,56 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		CB9038EB377BF0AE2BD83B739AEFC32F /* Support Files */ = {
+		B06988A6A9A5D638F9A261B50C879B81 /* OAuthSwift */ = {
 			isa = PBXGroup;
 			children = (
-				BCA09CD80B0ED0935789775F59B029EA /* FilesProvider.modulemap */,
-				3ED8D79E6F01E7B97D0D8BCCDFAEFC6D /* FilesProvider.xcconfig */,
-				D5059CFB9EDDD2D5F8971F21EE2EB5AE /* FilesProvider-dummy.m */,
-				9B543E138AF2B5ABC624F7C85628F8DB /* FilesProvider-prefix.pch */,
-				EF7D55B8643076BAE6BDBA4B7BE88196 /* FilesProvider-umbrella.h */,
-				9AC48A02206F96785F347C7EA2541893 /* Info.plist */,
+				49598E1F9238C210C75422A958401C01 /* Collection+OAuthSwift.swift */,
+				A7732B3AF0013A7ECB74F60287052176 /* Data+OAuthSwift.swift */,
+				731704EC44A7C9073665FBA8EB3627F4 /* Dictionary+OAuthSwift.swift */,
+				0DE006EFEC4738A13C26F426A8486CF1 /* HMAC.swift */,
+				481DA1EABC96DC149F9EE56F957364B0 /* Int+OAuthSwift.swift */,
+				C3BC3E28DDAD3EA75691D8266865157D /* NotificationCenter+OAuthSwift.swift */,
+				52D94787BC890F73CD5169AF5B75642E /* NSError+OAuthSwift.swift */,
+				E8E02AE739F8B222EF34744CB0BA8563 /* OAuth1Swift.swift */,
+				85C92C428788C34C03B034A230804A77 /* OAuth2Swift.swift */,
+				94D87E4AA512E651BFE0E233CB3AC5D2 /* OAuthSwift.swift */,
+				2B11271D0FE87E09DB7F25E391A66C83 /* OAuthSwiftClient.swift */,
+				D6DBF7C461627EE0828B93AE85AD8986 /* OAuthSwiftCredential.swift */,
+				ABE03177005C8BFCA42519FB90D73EB0 /* OAuthSwiftError.swift */,
+				93D38106218017F35EBED6BB46387392 /* OAuthSwiftHTTPRequest.swift */,
+				460843A3C2DD2025E2EA7D67F2AB5D50 /* OAuthSwiftMultipartData.swift */,
+				B18C7C79D627C0DAA95B7FD0E91BD89D /* OAuthSwiftResponse.swift */,
+				CFAA37B5E85C876BE1C459F21915EEDC /* OAuthSwiftURLHandlerType.swift */,
+				427D268D29D78FCADE9BFD0D15911717 /* OAuthWebViewController.swift */,
+				1C4A0A0D7D1F938A05ED537F13CACE3B /* Objc.swift */,
+				00CB7F6356D125BCC284A8E7C9347F18 /* SHA1.swift */,
+				4EA042910CBD39985C37BEBE4720990E /* String+OAuthSwift.swift */,
+				A12850ADF47D21F76F6C14041EAE0AA8 /* UIApplication+OAuthSwift.swift */,
+				07270815107DD04EAA15ABAFBA3C9FDB /* URL+OAuthSwift.swift */,
+				120A5219D39F59811AA216CFD8C57B20 /* Utils.swift */,
+				ED63E84FB3A80A088D29D341C7C8C4CC /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/FilesProvider";
+			name = OAuthSwift;
+			path = OAuthSwift;
 			sourceTree = "<group>";
 		};
-		E2D4A1B0BA89C1728EBA6B2AD3411E25 /* Pods */ = {
+		ED63E84FB3A80A088D29D341C7C8C4CC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6063E8AEF48E4704E04AEF97E8B738B5 /* FilesProvider */,
+				60211CE5456A1B6C1D0768A80FD25AA2 /* Info.plist */,
+				E218B1318CFC9268825180AE53EB447F /* OAuthSwift.modulemap */,
+				00260E94F2B5834663462F15ECB5586E /* OAuthSwift.xcconfig */,
+				C2FD9FBF3FCBC292A651D658BAEC2D8B /* OAuthSwift-dummy.m */,
+				FCA0A6EAC45A9EE54972FA6FE4385E67 /* OAuthSwift-prefix.pch */,
+				49D6EFA229467E4FCE86698149D6374B /* OAuthSwift-umbrella.h */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/OAuthSwift";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		002A06333819CFB8C79102F0AF29C3C6 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA0499DFF3177AF38B9CFBC3D8165793 /* Pods-FTPtester-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2488E7B0BA500B94EC592BAEABE8F69A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,26 +424,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		449B91827AB0541E726FA72E9B179E8E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A6B8055DEE857F21D04A3FF7485A44E /* OAuthSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53B9BB1635ADBA2C0BE09DF6DC461E29 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B2EC593EBCF735E657FC4F7D79662A2 /* Pods-FTPtester-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C8588DB0E9348A6FB3E6FD0175EB4F1E /* Pods-FTPtester */ = {
+		98E7E4D2AA18812FD0E7F3798EEBD54D /* Pods-FTPtester */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2F38E27DE81A391A13C33ACEB64B7CD4 /* Build configuration list for PBXNativeTarget "Pods-FTPtester" */;
+			buildConfigurationList = 62C0E462A3745CE1BC0387AA3BCB5CC9 /* Build configuration list for PBXNativeTarget "Pods-FTPtester" */;
 			buildPhases = (
-				002A06333819CFB8C79102F0AF29C3C6 /* Headers */,
-				2415B891FA47FE8166ADF977382E1524 /* Sources */,
-				86491DAAF94149D6A438163DE54C901F /* Frameworks */,
-				28A2C59414181906BD76F9A821CB72EE /* Resources */,
+				53B9BB1635ADBA2C0BE09DF6DC461E29 /* Headers */,
+				FD3781811CA8E03557394C724D21DF22 /* Sources */,
+				CEB4E056013A2FC1E3CE9A32A81B902B /* Frameworks */,
+				5860DE5909F7BF14141CE3ED705FA4F6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8706B441E07E721CC93C138835768AFB /* PBXTargetDependency */,
+				964FD1511C13FEFE4D912699FB80CCC6 /* PBXTargetDependency */,
+				220E83473B35471A616EADB8F2A25DE5 /* PBXTargetDependency */,
 			);
 			name = "Pods-FTPtester";
 			productName = "Pods-FTPtester";
-			productReference = 60C90969D35AB65F80F0FB87F87FB35C /* Pods_FTPtester.framework */;
+			productReference = C578F9481935C9DAAE74106A8AA07372 /* Pods_FTPtester.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C8A454C17010694AF6DB1A515F70E2BC /* FilesProvider */ = {
@@ -347,7 +478,25 @@
 			);
 			name = FilesProvider;
 			productName = FilesProvider;
-			productReference = 2B0329D48DE30279C0F6FD2E6E252246 /* FilesProvider.framework */;
+			productReference = 5DFFB31D1D0B0B860CFDFD5408C9CDAC /* FilesProvider.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EF83FCC10E7453ACCB801B656501E2F6 /* OAuthSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0C06C9BF416D71CB5103EF8C8729E7A /* Build configuration list for PBXNativeTarget "OAuthSwift" */;
+			buildPhases = (
+				449B91827AB0541E726FA72E9B179E8E /* Headers */,
+				60A94A6F5C559908A77A309C98AC631A /* Sources */,
+				E411FE86C35FE60BCDED88381E3A1DE4 /* Frameworks */,
+				1839B9C4027C89A1120F8E2F6BB75A7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OAuthSwift;
+			productName = OAuthSwift;
+			productReference = AAE5DC1A7895F08F8D9F6781EF55D44A /* OAuthSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -367,18 +516,26 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 5365F682D023174CFE6C6A65A52D817F /* Products */;
+			productRefGroup = 95CAA507F08D194D4D41025118FBDCA9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C8A454C17010694AF6DB1A515F70E2BC /* FilesProvider */,
-				C8588DB0E9348A6FB3E6FD0175EB4F1E /* Pods-FTPtester */,
+				EF83FCC10E7453ACCB801B656501E2F6 /* OAuthSwift */,
+				98E7E4D2AA18812FD0E7F3798EEBD54D /* Pods-FTPtester */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		28A2C59414181906BD76F9A821CB72EE /* Resources */ = {
+		1839B9C4027C89A1120F8E2F6BB75A7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5860DE5909F7BF14141CE3ED705FA4F6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -395,14 +552,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2415B891FA47FE8166ADF977382E1524 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6DC228FF35A5360B654EA155D05D4B4F /* Pods-FTPtester-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		41B7E570E1E0550E747AAF021556FE50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -449,19 +598,97 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		60A94A6F5C559908A77A309C98AC631A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A1908969828EF0B672312582540E304 /* Collection+OAuthSwift.swift in Sources */,
+				615B4F07638913112ACF0FDFA305BB36 /* Data+OAuthSwift.swift in Sources */,
+				7B17CD91C88596B5F2D19D16CB28A4FD /* Dictionary+OAuthSwift.swift in Sources */,
+				A7A4A80FE4D52D1492141FB82CED7679 /* HMAC.swift in Sources */,
+				54EC154AEE5C8B1E2DE1D39EB0071F30 /* Int+OAuthSwift.swift in Sources */,
+				6F78BFAAAD958F7B294EAD931C21C3C1 /* NotificationCenter+OAuthSwift.swift in Sources */,
+				9D2D4F83EB0072F2F9976666F90412D0 /* NSError+OAuthSwift.swift in Sources */,
+				602C1949653A4615A5DD6AC91B824BBC /* OAuth1Swift.swift in Sources */,
+				0E8E16BFB2519FDDFC29EEACEBC25784 /* OAuth2Swift.swift in Sources */,
+				95A48A974C9115D1C848C6FAB5CE5FB8 /* OAuthSwift-dummy.m in Sources */,
+				2C0B55F2EFCFCE6A903D5F9C7F9E2FC7 /* OAuthSwift.swift in Sources */,
+				BEEB7138D830B9414158F024CF836B2E /* OAuthSwiftClient.swift in Sources */,
+				F0E90BDEF941B43FBEB3469F9BD2056F /* OAuthSwiftCredential.swift in Sources */,
+				ED9967754FA36BC9BE4F248E94F0134B /* OAuthSwiftError.swift in Sources */,
+				C417DA5E48DE74B3E2C6F38BD6E8AA82 /* OAuthSwiftHTTPRequest.swift in Sources */,
+				C599CE94C59B4740EC39FD0115B3EC6E /* OAuthSwiftMultipartData.swift in Sources */,
+				4337162E4FCBB327692532D2AADB24AB /* OAuthSwiftResponse.swift in Sources */,
+				9842D46A74A89E0ED7809E92EC434290 /* OAuthSwiftURLHandlerType.swift in Sources */,
+				CA69265D91583F5EEE1925B6D303E8B0 /* OAuthWebViewController.swift in Sources */,
+				9233126AB5F69C247A408E26A9B7942C /* Objc.swift in Sources */,
+				15C96676060BF2C17D270C3F029644B1 /* SHA1.swift in Sources */,
+				1DED3FDEE669B446980A6E6F842F9549 /* String+OAuthSwift.swift in Sources */,
+				54143F95ED39F0BF32782D9D7F9AAFD3 /* UIApplication+OAuthSwift.swift in Sources */,
+				B79BE1F4BADB104866BB7829F473E02F /* URL+OAuthSwift.swift in Sources */,
+				33288BB59843FAAD4A2330C75D48B80F /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3781811CA8E03557394C724D21DF22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D420BC0F276AC46E9E08B2CABD4427F6 /* Pods-FTPtester-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8706B441E07E721CC93C138835768AFB /* PBXTargetDependency */ = {
+		220E83473B35471A616EADB8F2A25DE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuthSwift;
+			target = EF83FCC10E7453ACCB801B656501E2F6 /* OAuthSwift */;
+			targetProxy = 67E93E0CDDE4AAC3A258FE44428FF3C7 /* PBXContainerItemProxy */;
+		};
+		964FD1511C13FEFE4D912699FB80CCC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FilesProvider;
 			target = C8A454C17010694AF6DB1A515F70E2BC /* FilesProvider */;
-			targetProxy = 6604CCE71312B60EBDBB8201CD73C0FF /* PBXContainerItemProxy */;
+			targetProxy = E367A57BC9B884152199A21EA06720A6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0CD53F9F404320899BB5CE46740BFC7A /* Debug */ = {
+		352903499A324D190BD5FE5621D96CD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00260E94F2B5834663462F15ECB5586E /* OAuthSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OAuthSwift/OAuthSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OAuthSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OAuthSwift/OAuthSwift.modulemap";
+				PRODUCT_MODULE_NAME = OAuthSwift;
+				PRODUCT_NAME = OAuthSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3CDBBE55880E8A1847B08EF9CB45F189 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB5E94A9DCC4932C7FFB714470C02BEF /* Pods-FTPtester.debug.xcconfig */;
 			buildSettings = {
@@ -496,45 +723,9 @@
 			};
 			name = Debug;
 		};
-		1A77D5B7A4939A0CCAE1B9105F786115 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F65318A356D7BCF4093F550757DC29EF /* Pods-FTPtester.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-FTPtester/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FTPtester/Pods-FTPtester.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		544B49DEB423EF13DFD082BB2584BD17 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3ED8D79E6F01E7B97D0D8BCCDFAEFC6D /* FilesProvider.xcconfig */;
+			baseConfigurationReference = 5554CCEB6FA3AA0E2811FD0177A91A2D /* FilesProvider.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -630,7 +821,7 @@
 		};
 		859C623E623CA61F07D09691AD3E47C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3ED8D79E6F01E7B97D0D8BCCDFAEFC6D /* FilesProvider.xcconfig */;
+			baseConfigurationReference = 5554CCEB6FA3AA0E2811FD0177A91A2D /* FilesProvider.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -655,6 +846,42 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C4814A284313033E552E6C0FB036B4E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F65318A356D7BCF4093F550757DC29EF /* Pods-FTPtester.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FTPtester/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FTPtester/Pods-FTPtester.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -721,6 +948,40 @@
 			};
 			name = Release;
 		};
+		F4A1518ACE5235985496D2CBB4069E47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00260E94F2B5834663462F15ECB5586E /* OAuthSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OAuthSwift/OAuthSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OAuthSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OAuthSwift/OAuthSwift.modulemap";
+				PRODUCT_MODULE_NAME = OAuthSwift;
+				PRODUCT_NAME = OAuthSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -742,11 +1003,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2F38E27DE81A391A13C33ACEB64B7CD4 /* Build configuration list for PBXNativeTarget "Pods-FTPtester" */ = {
+		62C0E462A3745CE1BC0387AA3BCB5CC9 /* Build configuration list for PBXNativeTarget "Pods-FTPtester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0CD53F9F404320899BB5CE46740BFC7A /* Debug */,
-				1A77D5B7A4939A0CCAE1B9105F786115 /* Release */,
+				3CDBBE55880E8A1847B08EF9CB45F189 /* Debug */,
+				C4814A284313033E552E6C0FB036B4E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0C06C9BF416D71CB5103EF8C8729E7A /* Build configuration list for PBXNativeTarget "OAuthSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				352903499A324D190BD5FE5621D96CD0 /* Debug */,
+				F4A1518ACE5235985496D2CBB4069E47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
