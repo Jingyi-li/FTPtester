@@ -54,11 +54,11 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
         filesListTableView.delegate = self
         filesListTableView.dataSource = self
         documentsProvider.delegate = self as FileProviderDelegate
-//        initTextField()
-        filesListTableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
 
-//        let token = try? Keychain.get(user)
-//        print(token)
+        filesListTableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
+//        loginAutoDropbox()
+//        dropboxLogalView()
+
         if customView {
             directoryPath.isHidden = true
         }
@@ -166,14 +166,14 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
         if dropboxLogin {
             let alert = UIAlertController(title: "Alert", message: "No BinFile Chosen in Local", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
-                self.loginDropboxOutview.imageView?.image = UIImage(named: "dropboxW")
+                self.loginDropboxOutview.setImage(UIImage(named: "dropboxW"), for: .normal)
                 self.logoutDropbox()
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
 
         } else {
-            loginDropboxOutview.imageView?.image = UIImage(named: "dropboxB")
+            self.loginDropboxOutview.setImage(UIImage(named: "dropboxB"), for: .normal)
             loginToDropbox()
         }
 //        doOAuthDropbox()
@@ -277,15 +277,12 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
                                             // let keychain = Keychain()
                                             self.keychain[self.user] = credential.oauthToken
 //                                            var token = try? keychain.get(user)
-                                            
+                                            // TODO: Create Dropbox provider using urlcredential
                                             let urlcredential = URLCredential(user: self.user ?? "anonymous", password: credential.oauthToken, persistence: .permanent)
                                             self.dropboxFilesProvider = DropboxFileProvider(credential: urlcredential)
                                             self.dropboxLogin = true
                                         }
                                         
-                                        // TODO: Create Dropbox provider using urlcredential
-//                                        let urlcredential = URLCredential(user: self.user ?? "anonymous", password: credential.oauthToken, persistence: .permanent)
-//                                        self.dropboxFilesProvider = DropboxFileProvider(credential: urlcredential)
         }, failure: { error in
             print(error.localizedDescription)
         }
@@ -307,6 +304,25 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
         dropboxFilesProvider = nil
         dropboxLogin = false
     }
+    
+//    func loginAutoDropbox(){
+//        let token = try? keychain.get(user)
+//        if token != nil {
+//            let urlcredential = URLCredential(user: user ?? "anonymous", password: token as! String, persistence: .permanent)
+//            self.dropboxFilesProvider = DropboxFileProvider(credential: urlcredential)
+//            self.dropboxLogin = true
+//            print("Auto Login To Dropbox!")
+//        } else {
+//            print("User need to Login To Dropbox!")
+//        }
+//    }
+//    func dropboxLogalView(){
+//        if dropboxLogin {
+//            loginDropboxOutview.setImage(UIImage(named: "dropboxB"), for: .normal)
+//        } else{
+//            loginDropboxOutview.setImage(UIImage(named: "dropboxW"), for: .normal)
+//        }
+//    }
 
 
 
