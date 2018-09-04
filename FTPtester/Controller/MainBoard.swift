@@ -8,6 +8,8 @@
 
 import UIKit
 import FilesProvider
+import OAuthSwift
+import KeychainAccess
 
 
 class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, FileProviderDelegate{
@@ -16,7 +18,9 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
 
     @IBOutlet weak var directoryPath: UITextField!
     @IBOutlet weak var filesListTableView: UITableView!
-
+    @IBOutlet weak var loginDropboxOutview: UIButton!
+    
+    
     
     
     var fileList = [FileObject]()
@@ -26,6 +30,13 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
     var flagTableView = 1
     var customView : Bool = true
 //    var cradle = ["userName" : "", "password": "", "url": ""]
+    
+//    for dropbox
+    var oauthswift: OAuthSwift?
+    let keychain = Keychain()
+    let user: String = "Cradle"
+    var dropboxFilesProvider: DropboxFileProvider?
+    var dropboxLogin = false
     
     
 
@@ -45,11 +56,13 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
         documentsProvider.delegate = self as FileProviderDelegate
 //        initTextField()
         filesListTableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
-        setupKeyboardDismissRecognizer()
-        
+
+//        let token = try? Keychain.get(user)
+//        print(token)
         if customView {
             directoryPath.isHidden = true
         }
+
         getDirectory()
 
     }
@@ -78,7 +91,7 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
         getFielsInDirectiry(directoryPath: directoryPath.text ?? "/")
     }
     
-    @IBAction func fileSaveToLocal(_ sender: Any) {
+    @IBAction func downloadFilesToLocal(_ sender: Any) {
         if flagTableView == 1 {
             if let row = filesSelected {
                 let nameString = "\(fileList[row].name)"
@@ -97,12 +110,35 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
             }
             
             
-        } else {
+        } else if flagTableView == 2 {
             print("Please into Cradle view")
         }
         filesSelected = nil
     }
 
+
+    @IBAction func uploadFilesToDropbox(_ sender: Any) {
+        if flagTableView == 2 {
+            if let row = filesSelected {
+                let nameString = "\(fileList[row].name)"
+                print(nameString)
+                let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent(nameString)
+                var path = directoryPath.text ?? "/"
+                path.append(nameString)
+                print(path)
+                
+                let cell = self.filesListTableView.cellForRow(at: IndexPath(row: filesSelected!, section: 0)) as? CustomCell
+                cell?.fileProcess.observedProgress = dropboxFilesProvider?.copyItem(localFile: fileURL, to: path, completionHandler: nil)
+            }else {
+                let alert = UIAlertController(title: "Alert", message: "No BinFile Chosen in Local", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }else {
+            print("Cannot upload items directly to dropbox")
+        }
+        filesSelected = nil
+    }
     
     @IBAction func fileDeletInLocal(_ sender: Any) {
         if flagTableView == 2{
@@ -125,8 +161,23 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func segueToDropboxLoginView(_ sender: Any) {
-        performSegue(withIdentifier: "loginToDropbox", sender: self)
+    @IBAction func dropboxLoginButton(_ sender: Any) {
+        
+        if dropboxLogin {
+            let alert = UIAlertController(title: "Alert", message: "No BinFile Chosen in Local", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
+                self.loginDropboxOutview.imageView?.image = UIImage(named: "dropboxW")
+                self.logoutDropbox()
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+
+        } else {
+            loginDropboxOutview.imageView?.image = UIImage(named: "dropboxB")
+            loginToDropbox()
+        }
+//        doOAuthDropbox()
+
     }
     
     
@@ -139,7 +190,6 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
         directoryPath.text = dirPath
         getFielsInDirectiry(directoryPath: dirPath)
     }
-    
 
     
     func getFielsInDirectiry(directoryPath dirPath: String){
@@ -204,19 +254,60 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
         }
         return dirReturnPath
     }
+//    dropbox
+    func doOAuthDropbox(){
+        
+        let oauthswift = OAuth2Swift(consumerKey: "m2vun8jkvk85shq",
+                                     consumerSecret: "2ks03t1tsvnkhys",
+                                     authorizeUrl: "https://www.dropbox.com/oauth2/authorize",
+                                     accessTokenUrl: "https://api.dropbox.com/1/oauth2/token",
+                                     responseType: "token")
+        
+        self.oauthswift = oauthswift
+        
+        oauthswift.authorizeURLHandler = SafariURLHandler(viewController: self, oauthSwift: oauthswift)
+        
+        
+        let _ = oauthswift.authorize(withCallbackURL: URL(string: "FTPtester://oauth-callback/dropbox")!,
+                                     scope: "", state:"",
+                                     success: { credential, response, parameters in
+                                        
+                                        if credential.oauthToken != nil {
+                                            // TODO: Save credential in keychain
+                                            // let keychain = Keychain()
+                                            self.keychain[self.user] = credential.oauthToken
+//                                            var token = try? keychain.get(user)
+                                            
+                                            let urlcredential = URLCredential(user: self.user ?? "anonymous", password: credential.oauthToken, persistence: .permanent)
+                                            self.dropboxFilesProvider = DropboxFileProvider(credential: urlcredential)
+                                            self.dropboxLogin = true
+                                        }
+                                        
+                                        // TODO: Create Dropbox provider using urlcredential
+//                                        let urlcredential = URLCredential(user: self.user ?? "anonymous", password: credential.oauthToken, persistence: .permanent)
+//                                        self.dropboxFilesProvider = DropboxFileProvider(credential: urlcredential)
+        }, failure: { error in
+            print(error.localizedDescription)
+        }
+        )
+        
+    }
     
-    func setupKeyboardDismissRecognizer(){
-        let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(
-            target: self,
-            action: #selector(MainBoard.dismissKeyboard))
-        tapRecognizer.cancelsTouchesInView = false
-        self.view.addGestureRecognizer(tapRecognizer)
+    func loginToDropbox(){
+        doOAuthDropbox()
+        
+    }
+    
+    func logoutDropbox(){
+        do {
+            try keychain.remove(user)
+        } catch let error {
+            print("error: \(error)")
+        }
+        dropboxFilesProvider = nil
+        dropboxLogin = false
     }
 
-    @objc func dismissKeyboard()
-    {
-        view.endEditing(true)
-    }
 
 
 //    filesListTableView UITableView Delegate

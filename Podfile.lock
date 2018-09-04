@@ -1,24 +1,24 @@
 PODS:
   - FilesProvider (0.25.1)
+  - KeychainAccess (3.1.1)
   - OAuthSwift (1.2.2)
-  - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
   - FilesProvider
+  - KeychainAccess
   - OAuthSwift (~> 1.2.0)
-  - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - FilesProvider
+    - KeychainAccess
     - OAuthSwift
-    - SwiftyJSON
 
 SPEC CHECKSUMS:
   FilesProvider: f6ab75211d2fd4814720f19b427e43668dc24585
+  KeychainAccess: 7bd430028059754a3debab3cfc0bd1fc7fb85df3
   OAuthSwift: 27b34fe80b76b67cd8f45571e0be2432bc9f6de1
-  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 1f5fdb0c74cca972c1aab28087ac1b051ebfbca0
+PODFILE CHECKSUM: 24f27a5efbf88f0d0cd70be1885cf5006a38392c
 
 COCOAPODS: 1.5.3

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "099DE3E3603A82C810FB032D290E196E"
+               BlueprintIdentifier = "6EDB6A52B6F31A9CC56BDA577B773214"
                BuildableName = "Pods_FTPtester.framework"
                BlueprintName = "Pods-FTPtester"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "099DE3E3603A82C810FB032D290E196E"
+            BlueprintIdentifier = "6EDB6A52B6F31A9CC56BDA577B773214"
             BuildableName = "Pods_FTPtester.framework"
             BlueprintName = "Pods-FTPtester"
             ReferencedContainer = "container:Pods.xcodeproj">

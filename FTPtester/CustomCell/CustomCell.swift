@@ -30,7 +30,7 @@ class CustomCell: UITableViewCell {
                 fileProcess.isHidden = false
             } else {
                 fileImage.image = UIImage(named: "fileR")
-                fileProcess.isHidden = true
+                fileProcess.isHidden = false
             }
         }
         

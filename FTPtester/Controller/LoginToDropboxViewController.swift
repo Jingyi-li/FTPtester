@@ -9,18 +9,25 @@
 import UIKit
 import OAuthSwift
 import FilesProvider
-import SwiftyJSON
+import KeychainAccess
 
 class LoginToDropboxViewController: UIViewController {
     
     
     var oauthswift: OAuthSwift?
+    let keychain = Keychain()
+    let user: String = "Cradle"
     var dropboxFilesProvider: DropboxFileProvider?
+    var turnback = false
 
 //    @IBOutlet weak var view: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        doOAuthDropbox()
+//        if turnback {
+//            dismiss(animated: true, completion: nil)
+//        }
 //        doOAuthDropbox()
 
         // Do any additional setup after loading the view.
@@ -35,9 +42,6 @@ class LoginToDropboxViewController: UIViewController {
     
     @IBAction func backToMainboardButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-    }
-    @IBAction func auth(_ sender: Any) {
-        doOAuthDropbox()
     }
     
     //    dropbox APP Key :m2vun8jkvk85shq APP secret:2ks03t1tsvnkhys
@@ -55,14 +59,19 @@ class LoginToDropboxViewController: UIViewController {
         
 
         let _ = oauthswift.authorize(withCallbackURL: URL(string: "FTPtester://oauth-callback/dropbox")!,
-//        let _ = oauthswift.authorize(withCallbackURL: nil,
                             scope: "", state:"",
                             success: { credential, response, parameters in
-//                                let urlcredential = URLCredential(user: user ?? "anonymous", password: credential.oauthToken, persistence: .permanent)
-                                print(credential.oauthToken)
-//                                print(parameters[account_id])
-                                // TODO: Save credential in keychain
+                                
+                                if credential.oauthToken != nil {
+                                    // TODO: Save credential in keychain
+//                                    let keychain = Keychain()
+                                    self.keychain[self.user] = credential.oauthToken
+                                }
+                                
                                 // TODO: Create Dropbox provider using urlcredential
+                                let urlcredential = URLCredential(user: self.user ?? "anonymous", password: credential.oauthToken, persistence: .permanent)
+                                self.dropboxFilesProvider = DropboxFileProvider(credential: urlcredential)
+                                self.turnback = true
         }, failure: { error in
             print(error.localizedDescription)
         }
