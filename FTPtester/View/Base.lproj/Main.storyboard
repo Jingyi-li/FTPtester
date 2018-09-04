@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kWI-Du-Xse">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZlD-Qb-7v2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -127,7 +127,7 @@
                                                         <rect key="frame" x="0.0" y="28" width="311" height="55"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DPm-RN-HLM" id="kne-mQ-uJM" customClass="CustomCell" customModule="FTPtester" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="311" height="55"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="311" height="54.5"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                         </tableViewCellContentView>
                                                     </tableViewCell>
@@ -219,6 +219,16 @@
                                     <action selector="backToMainboardButton:" destination="ZlD-Qb-7v2" eventType="touchUpInside" id="0f6-4m-Ut0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZh-No-PQ4">
+                                <rect key="frame" x="260" y="49" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="auth:" destination="ZlD-Qb-7v2" eventType="touchUpInside" id="0qr-wt-A81"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="hwq-Jj-ZmC" firstAttribute="top" secondItem="m4P-SI-oJv" secondAttribute="top" constant="5" id="IVd-GW-Lc5"/>
@@ -233,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rqe-hK-02k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="134"/>
+            <point key="canvasLocation" x="1724" y="133.5832083958021"/>
         </scene>
         <!--Login Page View Controller-->
         <scene sceneID="8tG-n5-VCF">

@@ -8,5 +8,6 @@ target 'FTPtester' do
 
 pod 'FilesProvider'
 pod 'OAuthSwift', '~> 1.2.0'
+pod 'SwiftyJSON'
 
 end
