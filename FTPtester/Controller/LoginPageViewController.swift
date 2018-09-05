@@ -17,7 +17,7 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
     var ftpFileProvider: FTPFileProvider?
     var loginCradle = false
     
-
+    
     
     
     @IBOutlet weak var userNameInput: UITextField!
@@ -30,10 +30,10 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
         initLoginPage()
         setupKeyboardDismissRecognizer()
         customCheckboxLayout(checkbox: customCheckbox)
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -50,14 +50,15 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
             } else {
                 MainBoardVC.loginCradle = loginCradle
             }
-
-           
+            
+            
             
         }
     }
-    
+    //MARK: - Control Button
+    /***************************************************************/
     @IBAction func customCheckbox(_ sender: Checkbox) {
-//        print("checkbox value change: \(sender.isChecked)")
+        //        print("checkbox value change: \(sender.isChecked)")
     }
     
     @IBAction func loginToLocal(_ sender: Any) {
@@ -78,7 +79,7 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
         logInToCradle()
         ftpFileProvider?.loginToFtp(completionHandler: { (error) in
             let message = self.errorDeclar(error.debugDescription)
-//            let message = error.debugDescription
+            //            let message = error.debugDescription
             if error != nil {
                 
                 let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
@@ -95,10 +96,12 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
                 }
             }
         })
-//        performSegue(withIdentifier: "loginToMainBoard", sender: self)
+        //        performSegue(withIdentifier: "loginToMainBoard", sender: self)
         
     }
     
+    //MARK: - Functions
+    /***************************************************************/
     func initLoginPage(){
         userNameInput.text = "pi"
         passwordInput.text = "Mba287xd!"
@@ -107,7 +110,7 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
         
     }
     
-//    Login to Cradle
+    //    Login to Cradle
     func logInToCradle() {
         let ftpCredential = getCredential()
         initFTP(ftpCredential.userName, ftpCredential.passWord, ftpCredential.urlPath)
@@ -122,19 +125,19 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
         return (userName, passWord, urlPath)
     }
     
-
+    
     func initFTP(_ userName : String, _ passWord : String, _ urlPath : String){
         
         let credential = URLCredential(user: userName, password: passWord, persistence: .permanent)
-
+        
         ftpFileProvider = FTPFileProvider(baseURL: URL(string: urlPath)!, credential: credential)
-
+        
         //need to print a confirm alert to show it already login
     }
     
-   
     
-//    checkbox layout
+    
+    //    checkbox layout
     func customCheckboxLayout (checkbox: Checkbox){
         checkbox.checkboxBackgroundColor = .clear
         checkbox.borderStyle = .circle
@@ -156,7 +159,8 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
     }
     
     
-    
+    //MARK: - Delegate
+    /***************************************************************/
     
     //    fileProviderDelegate
     func fileproviderSucceed(_ fileProvider: FileProviderOperations, operation: FileOperationType) {
@@ -189,7 +193,10 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
             break
         }
     }
-//    make error readable to user
+    
+    //MARK: - Error library
+    /***************************************************************/
+    //    make error readable to user
     func errorDeclar(_ error: String)-> String {
         var message: String?
         if error.contains("Login authentication failed") {
@@ -201,18 +208,6 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
         }
         return message!
     }
-   
     
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
