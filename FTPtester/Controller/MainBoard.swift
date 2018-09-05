@@ -25,6 +25,7 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
     
     var fileList = [FileObject]()
     var filesNameArray = [String]()
+    var filesDropboxNameArray = [String]()
     var filesSelected : Int?
 //    flagTableView = 1 means Cradle 2 means Local
     var flagTableView = 1
@@ -83,6 +84,7 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
 
     @IBAction func dirLocalGetButton(_ sender: Any) {
         flagTableView = 2
+        filesInDrobox()
         getDirectory()
     }
     
@@ -123,7 +125,8 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
                 let nameString = "\(fileList[row].name)"
                 print(nameString)
                 let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent(nameString)
-                var path = directoryPath.text ?? "/"
+//                var path = directoryPath.text ?? "/"
+                var path = "/"
                 path.append(nameString)
                 print(path)
                 
@@ -138,6 +141,7 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
             print("Cannot upload items directly to dropbox")
         }
         filesSelected = nil
+
     }
     
     @IBAction func fileDeletInLocal(_ sender: Any) {
@@ -245,6 +249,23 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
         
     }
     
+    func filesInDrobox(){
+        
+        dropboxFilesProvider?.contentsOfDirectory(path: "/", completionHandler: { (contents, error) in
+            print(error)
+            
+            self.filesDropboxNameArray.removeAll()
+            
+            for file in contents {
+                if file.isRegularFile {
+                    self.filesDropboxNameArray.append("\(file.name)")
+//                    print("\(file.name)")
+                }
+            }
+            print("filesDropboxNameArray: \(self.filesDropboxNameArray)")
+        })
+    }
+    
     func dirBackToUpFolder(dirCurrentPath directoryPath: String)-> String{
         var dirTemPath = directoryPath.split(separator: "/")
         dirTemPath.popLast()
@@ -274,12 +295,12 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
                                         
                                         if credential.oauthToken != nil {
                                             // TODO: Save credential in keychain
-                                            // let keychain = Keychain()
                                             self.keychain[self.user] = credential.oauthToken
 //                                            var token = try? keychain.get(user)
                                             // TODO: Create Dropbox provider using urlcredential
                                             let urlcredential = URLCredential(user: self.user ?? "anonymous", password: credential.oauthToken, persistence: .permanent)
                                             self.dropboxFilesProvider = DropboxFileProvider(credential: urlcredential)
+                                            self.filesInDrobox()
                                             self.dropboxLogin = true
                                         }
                                         
@@ -302,6 +323,7 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
             print("error: \(error)")
         }
         dropboxFilesProvider = nil
+        filesDropboxNameArray.removeAll()
         dropboxLogin = false
     }
     
@@ -335,9 +357,7 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
         
         let file = fileList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomCell
-        cell.setFileCell(file: file, flag: flagTableView)
-        
-//        cell.backgroundColor = UIColor.groupTableViewBackground
+        cell.setFileCell(file: file, flag: flagTableView, dropboxArray: filesDropboxNameArray)
         
         return cell
     }

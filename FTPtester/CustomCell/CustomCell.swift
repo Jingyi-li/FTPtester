@@ -16,8 +16,9 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var fileProcess: UIProgressView!
     @IBOutlet weak var fileImage: UIImageView!
     
-    func setFileCell(file: FileObject, flag: Int){
+    func setFileCell(file: FileObject, flag: Int, dropboxArray: [String]){
         fileName.text = file.name
+        let filename = file.name
         fileProcess.progress = 0
         if file.isDirectory{
             fileSize.text = "Directory"
@@ -29,7 +30,11 @@ class CustomCell: UITableViewCell {
                 fileImage.image = UIImage(named: "fileB")
                 fileProcess.isHidden = false
             } else {
-                fileImage.image = UIImage(named: "fileR")
+                if dropboxArray.contains(filename) {
+                    fileImage.image = UIImage(named: "fileRDropbox")
+                } else {
+                    fileImage.image = UIImage(named: "fileR")
+                }
                 fileProcess.isHidden = false
             }
         }
