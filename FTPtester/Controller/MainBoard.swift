@@ -31,7 +31,7 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
     var flagTableView = 1
     var customView : Bool = true
 //    var cradle = ["userName" : "", "password": "", "url": ""]
-    
+    var loginCradle: Bool?
 //    for dropbox
     var oauthswift: OAuthSwift?
     let keychain = Keychain()
@@ -63,8 +63,13 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
         if customView {
             directoryPath.isHidden = true
         }
-
-        getDirectory()
+        if loginCradle! {
+            flagTableView = 1
+            getDirectory()
+        } else {
+            flagTableView = 2
+            getDirectory()
+        }
 
     }
 
@@ -77,9 +82,14 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
    
 //    Press the Dir Button to get the FileList from the directory
     @IBAction func dirCradleGetButton(_ sender: Any) {
-        flagTableView = 1
-        getDirectory()
-        
+        if loginCradle! {
+            flagTableView = 1
+            getDirectory()
+        } else {
+            let alert = UIAlertController(title: "Alert", message: "You haven't login to Cradle. Please Login", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 
     @IBAction func dirLocalGetButton(_ sender: Any) {
@@ -168,7 +178,7 @@ class MainBoard: UIViewController , UITableViewDelegate, UITableViewDataSource, 
     @IBAction func dropboxLoginButton(_ sender: Any) {
         
         if dropboxLogin {
-            let alert = UIAlertController(title: "Alert", message: "No BinFile Chosen in Local", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Alert", message: "Going to Logout Dropbox!", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
                 self.loginDropboxOutview.setImage(UIImage(named: "dropboxW"), for: .normal)
                 self.logoutDropbox()

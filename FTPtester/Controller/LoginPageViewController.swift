@@ -15,6 +15,7 @@ import Foundation
 class LoginPageViewController: UIViewController, FileProviderDelegate {
     
     var ftpFileProvider: FTPFileProvider?
+    var loginCradle = false
     
 
     
@@ -41,15 +42,35 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "loginToMainBoard" {
             let MainBoardVC = segue.destination as! MainBoard
+            
+            if loginCradle {
+                MainBoardVC.ftpFileProvider = ftpFileProvider
+                MainBoardVC.customView = customCheckbox.isChecked
+                MainBoardVC.loginCradle = loginCradle
+            } else {
+                MainBoardVC.loginCradle = loginCradle
+            }
 
-            MainBoardVC.ftpFileProvider = ftpFileProvider
-            MainBoardVC.customView = customCheckbox.isChecked
+           
             
         }
     }
     
     @IBAction func customCheckbox(_ sender: Checkbox) {
 //        print("checkbox value change: \(sender.isChecked)")
+    }
+    
+    @IBAction func loginToLocal(_ sender: Any) {
+        let message = "Go Local Folder. If you want to reach Cradle please Login!"
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
+            print("login to local with out login to cradle")
+            self.loginCradle = false
+            self.performSegue(withIdentifier: "loginToMainBoard", sender: self)
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func loginToCradle(_ sender: Any) {
@@ -62,13 +83,14 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
                 
                 let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-//                self.present(alert, animated: true, completion: nil)
+                self.present(alert, animated: true, completion: nil)
                 DispatchQueue.main.async {
                     self.present(alert, animated: true, completion: nil)
                 }
             }
             else {
                 DispatchQueue.main.async {
+                    self.loginCradle = true
                     self.performSegue(withIdentifier: "loginToMainBoard", sender: self)
                 }
             }
@@ -88,7 +110,6 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
 //    Login to Cradle
     func logInToCradle() {
         let ftpCredential = getCredential()
-//        print(ftpCredential)
         initFTP(ftpCredential.userName, ftpCredential.passWord, ftpCredential.urlPath)
         ftpFileProvider?.delegate = self as FileProviderDelegate
         
@@ -116,8 +137,6 @@ class LoginPageViewController: UIViewController, FileProviderDelegate {
 //    checkbox layout
     func customCheckboxLayout (checkbox: Checkbox){
         checkbox.checkboxBackgroundColor = .clear
-//        checkbox.uncheckedBorderColor = .clear
-//        checkbox.checkedBorderColor = .clear
         checkbox.borderStyle = .circle
         checkbox.checkmarkStyle = .tick
         

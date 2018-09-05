@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kWI-Du-Xse">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -190,6 +190,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Fzp-DE-7hI"/>
                     <connections>
                         <outlet property="directoryPath" destination="cfs-z7-fMh" id="IpA-nr-hxg"/>
                         <outlet property="filesListTableView" destination="ufu-RX-8FU" id="PXp-8D-GsM"/>
@@ -381,6 +382,17 @@
                                     <constraint firstAttribute="width" constant="240" id="jdl-Gb-FAv"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDr-75-gcs">
+                                <rect key="frame" x="319" y="25" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="a9Z-bO-FAX"/>
+                                    <constraint firstAttribute="width" constant="40" id="t40-VT-Y94"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="localfile"/>
+                                <connections>
+                                    <action selector="loginToLocal:" destination="kWI-Du-Xse" eventType="touchUpInside" id="tog-Ne-ahi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="mZJ-EQ-Z70" firstAttribute="trailing" secondItem="02k-Vf-nfu" secondAttribute="trailing" id="8D0-Y3-7Au"/>
@@ -391,6 +403,8 @@
                             <constraint firstItem="Bqx-bC-1jc" firstAttribute="centerX" secondItem="iC5-cg-aZx" secondAttribute="centerX" id="gMs-Gk-rkB"/>
                             <constraint firstItem="u6T-mO-0Pl" firstAttribute="top" secondItem="Bqx-bC-1jc" secondAttribute="bottom" id="rSk-ag-BYX"/>
                             <constraint firstItem="mZJ-EQ-Z70" firstAttribute="leading" secondItem="02k-Vf-nfu" secondAttribute="leading" id="tXY-h9-rML"/>
+                            <constraint firstItem="02k-Vf-nfu" firstAttribute="trailing" secondItem="RDr-75-gcs" secondAttribute="trailing" constant="16" id="wqv-Wy-w1h"/>
+                            <constraint firstItem="RDr-75-gcs" firstAttribute="top" secondItem="02k-Vf-nfu" secondAttribute="top" constant="5" id="y0G-TE-qXA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="02k-Vf-nfu"/>
                     </view>
@@ -412,6 +426,7 @@
         <image name="dropboxW" width="64" height="64"/>
         <image name="ftp-upload" width="64" height="64"/>
         <image name="link-chain" width="64" height="64"/>
+        <image name="localfile" width="64" height="64"/>
         <image name="logout" width="64" height="64"/>
         <image name="password" width="64" height="64"/>
         <image name="userName" width="64" height="64"/>
